@@ -1,0 +1,7 @@
+{
+    "id": "nodebb-theme-game-over",
+    "name": "Game Over",
+    "description": "The Game Over theme for NodeBB.",
+    "url": "https://github.com/psychobunny/nodebb-theme-game-over",
+    "screenshot": "screenshot.png"
+}

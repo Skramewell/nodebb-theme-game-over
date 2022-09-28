@@ -1,0 +1,53 @@
+{
+  "name": "nodebb-theme-game-over",
+  "version": "12.1.5",
+  "nbbpm": {
+    "compatibility": "^2.0.0"
+  },
+  "description": "The Game Over theme for NodeBB.",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skramewell/nodebb-theme-game-over"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "nodebb",
+    "theme",
+    "forum",
+    "bootstrap",
+    "responsive"
+  ],
+  "contributors": [
+    {
+      "name": "Manuel Sacramento",
+      "email": "manuel.sacramento@ifsoftware.solutions",
+      "url": "https://github.com/Skramewell"
+    },
+    {
+      "name": "Tiago Santos",
+      "email": "tiago.santos@ifsoftware.solutions",
+      "url": "https://github.com/tittuzito7"
+    },
+    {
+      "name": "Pedro Gonçalves",
+      "email": "manuel.sacramento@ifsoftware.solutions",
+      "url": "https://github.com/wolv45"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Skramewell/nodebb-theme-game-over/issues"
+  },
+  "dependencies": {
+    "pulling": "^2.0.0",
+    "striptags": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-nodebb": "^0.0.2",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}
