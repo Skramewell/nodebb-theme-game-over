@@ -41,18 +41,17 @@
 	}
 	.topic-header {
 		position: sticky;
-		// top: calc(var(--panel-offset) - 20px);
-		background-color: @body-bg;
+    	background-color: @category-default-title-bg;
 		z-index: @zindex-navbar;
-		margin-left: -15px;
-		margin-right: -15px;
-		padding-left: 15px;
-		padding-right: 15px;
+		margin-bottom: 10px;
+		padding: 10px;
+		border: 1px solid transparent;
+		border-radius: @border-radius-base;
+		box-shadow: 0 1px 1px @category-default-shadow;
+		border-color: @category-default-border-color;
 	}
 
 	.topic-info {
-		border-bottom: 1px solid @post-border-color;
-		margin-bottom: 10px;
 		padding-bottom: 10px;
 		> * {
 			padding-top: 10px;

@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-theme-game-over",
+  "name": "nodebb-theme-gameover",
   "version": "12.1.5",
   "nbbpm": {
     "compatibility": "^2.0.0"
@@ -8,7 +8,7 @@
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Skramewell/nodebb-theme-game-over"
+    "url": "https://github.com/Skramewell/nodebb-theme-gameover"
   },
   "scripts": {
     "lint": "eslint ."
@@ -39,7 +39,7 @@
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/Skramewell/nodebb-theme-game-over/issues"
+    "url": "https://github.com/Skramewell/nodebb-theme-gameover/issues"
   },
   "dependencies": {
     "pulling": "^2.0.0",

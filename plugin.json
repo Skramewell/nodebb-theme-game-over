@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-game-over",
+	"id": "nodebb-theme-gameover",
 	"hooks": [
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
 		{ "hook": "filter:config.get", "method": "getThemeConfig" },

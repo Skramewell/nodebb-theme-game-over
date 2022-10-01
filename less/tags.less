@@ -11,13 +11,17 @@
 	padding: .2em .4em .3em;
 	font-size: 85%;
 	text-transform: uppercase;
-	color: #999;
 	font-weight: 700;
 	white-space: nowrap;
+	border-radius: @border-radius-base;
+
+	&.in-list {
+		background: @navs-default-bg;
+	}
 }
 
 .tag-topic-count {
-	color: lighten(@brand-primary, 20%);
+	color: @game-over-lighten-color;
 	padding: 0em 0.4em 0.1em;
 	font-size: 85%;
 	font-weight: 700;
@@ -30,7 +34,7 @@
 	.tag {
 		text-transform: uppercase;
 		font-size: 10px;
-		background: lighten(@gray-lighter, 2.5%);
+		background: @navs-default-bg;
 		padding: 5px;
 		white-space: nowrap;
 	}

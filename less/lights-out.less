@@ -1,0 +1,177 @@
+body.theme-gameover.lights-out {
+    background: none repeat scroll 0 0 @body-bg-dark;
+    color: @text-color-dark;
+
+    a.permalink,
+    a.permalink:active,
+    a.permalink:focus,
+    a.permalink:hover {
+        color: @link-color-dark;
+        text-decoration: underline;
+    }
+
+    .navbar-default {
+        background-color: @navbar-default-bg;
+        border-color: @navbar-default-border;
+
+        .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+            background-color: @game-over-darken-color !important;
+        }
+
+        i {
+            color: inherit;
+        }
+
+        #search-button {
+            color: @navbar-default-link-color;
+            &:hover {
+                color: @navbar-default-link-hover-color
+            }
+        }
+    }
+ 
+    .categories-title {
+        background-color: @category-dark-title-bg;
+	    border-color: @category-dark-border-color;
+    }
+
+    .panel-heading {
+        background-color: @category-dark-title-bg;
+        color: @text-color-dark;
+        border-color: @category-dark-border-color;
+    }
+
+    .panel-body {
+        background-color: @category-dark-bg;
+        color: @text-color-dark;
+    }
+
+    .categories, .category > ul {
+        > li {
+            background-color: @category-dark-bg;
+            border-color: @category-dark-border-color;
+            box-shadow: 0 1px 1px @category-default-shadow;
+        }
+    }
+
+    .topic .topic-item.highlight, .category .category-item.highlight {
+        background-color: @category-dark-title-bg;
+    }
+
+    .recent-replies {
+        .widget-topics {
+            border-bottom: 1px solid @category-dark-border-color;
+        }
+    }
+
+    .topic { 
+        .posts {
+            [component=post] {
+                background-color: @topic-dark-bg;
+                border-color: @topic-dark-border-color;
+                box-shadow: 0 1px 1px @topic-dark-shadow;
+            }
+
+            &.timeline .timeline-event .icon .avatar,
+            &.timeline .timeline-event .timeline-badge,
+            &.timeline>[component=post] .icon .avatar,
+            &.timeline>[component=post] .timeline-badge {
+                box-shadow: 0 0 0 .5rem @body-bg-dark;
+            }
+        }
+        .topic-list-header {
+            background-color: @category-dark-title-bg;
+            box-shadow: 0 1px 1px @category-dark-shadow;
+            border-color: @category-dark-border-color;
+        }
+        .topic-header {
+            background-color: @category-dark-title-bg;
+            box-shadow: 0 1px 1px @category-dark-shadow;
+            border-color: @category-dark-border-color;
+        }
+    }
+
+    .breadcrumb {
+        > li {
+          + li:before {
+            color: @breadcrumb-color;
+          }
+          a {
+            color: @breadcrumb-color;
+          }
+        }
+    }
+
+    .composer {
+        background-color: @composer-dark-bg;
+        color: #ffffff;
+        .formatting-bar .formatting-group li {
+            color: #ffffff;
+        }
+        .composer-container {
+            .title-container {
+                .title {
+				    color: #ffffff;
+                    background: @composer-dark-write;
+                    border: 1px solid @composer-dark-write;
+                }
+            }
+        }
+        .title,
+        .preview,
+        .write {
+            background: @composer-dark-write;
+            border: 1px solid @composer-dark-write;
+            &:focus {
+                box-shadow: 0px 0px 0px 2px @game-over-color;
+            }
+        }
+        .preview {
+            border: 1px solid @composer-dark-write;
+            &:focus {
+                border: 2px solid @game-over-color;
+            }
+        }
+        .tags-container {
+            .bootstrap-tagsinput {
+				color: #ffffff;
+                background-color: @composer-dark-bg;
+            }
+        }
+        .formatting-bar .formatting-group li:hover {
+            background-color: @composer-dark-write;
+        }
+    }
+
+    .modal-content {
+        background-color: @modal-dark-bg;
+        color: #ffffff;
+    }
+
+    .nav-pills {
+        > li {
+            > a {
+            background-color: @navs-dark-bg;
+            color: #ffffff;
+            }
+        }
+    }
+
+    .form-control {
+        background-color: @gray-darker;
+        border-color: @gray-dark;
+        color: #ffffff;
+    }
+
+    .input-group-addon {
+        background-color: @gray-darker;
+        border-color: @gray-dark;
+        color: #ffffff;
+    }
+
+    .users-container {
+        .users-box{
+            background-color: @gray-darker;
+        }
+    }
+}

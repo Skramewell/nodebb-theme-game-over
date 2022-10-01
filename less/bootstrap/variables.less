@@ -7,14 +7,16 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@game-over-color:        #2c3e50;
+@game-over-color:              #F27405;
+@game-over-darken-color:         darken(@game-over-color, 6.5%);
+@game-over-lighten-color:        lighten(@game-over-color, 20%);
 
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             #6c757d;
-@gray-lighter:           #eee;
+@gray-lighter:           #f5f5f5;
 
 @brand-primary:         darken(#428bca, 6.5%); // #337ab7
 @brand-success:         #5cb85c;
@@ -29,11 +31,14 @@
 
 //** Background color for `<body>`.
 @body-bg:               #ecf0f1;
+@body-bg-dark:          #333333;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
+@text-color-dark:       @gray-light;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
+@link-color-dark:       #aaaaaa;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -105,8 +110,8 @@
 @line-height-small:         1.5;
 
 @border-radius-base:        8px;
-@border-radius-large:       0;
-@border-radius-small:       0;
+@border-radius-large:       8px;
+@border-radius-small:       8px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -364,14 +369,14 @@
 
 @navbar-default-color:             #333;
 @navbar-default-bg:                @game-over-color;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            @game-over-darken-color;
 
 // Navbar links
 @navbar-default-link-color:                #FFFFFF;
-@navbar-default-link-hover-color:          darken(@navbar-default-link-color, 40%);
+@navbar-default-link-hover-color:          darken(@game-over-color, 40%);
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         #FFFFFF;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-bg:            @game-over-darken-color;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -787,11 +792,11 @@
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-bg:                 @game-over-darken-color;
 //** Breadcrumb text color
-@breadcrumb-color:              #ccc;
+@breadcrumb-color:              #ffffff;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @gray-light;
+@breadcrumb-active-color:       @gray-dark;
 //** Textual separator for between breadcrumb elements
 @breadcrumb-separator:          "/";
 
@@ -869,10 +874,15 @@
 //##
 
 // Basics of a category
-@category-default-bg:                       #ffffff;
-@category-default-shadow:                   rgb(0 0 0 / 5%);
-@category-default-border-color:             #dddddd;
-@category-default-title-bg:                 #f5f5f5;
+@category-default-bg:                    #ffffff;
+@category-default-shadow:                rgb(0 0 0 / 5%);
+@category-default-border-color:          #dddddd;
+@category-default-title-bg:              #f5f5f5;
+
+@category-dark-bg:                       #222222;
+@category-dark-shadow:                   rgb(0 0 0 / 5%);
+@category-dark-border-color:             #333333;
+@category-dark-title-bg:                 #191919;
 
 //== Topic
 //
@@ -882,3 +892,35 @@
 @topic-default-bg:                       #ffffff;
 @topic-default-shadow:                   rgb(0 0 0 / 5%);
 @topic-default-border-color:             #dddddd;
+
+@topic-dark-bg:                          #222222;
+@topic-dark-shadow:                      rgb(0 0 0 / 5%);
+@topic-dark-border-color:                #333333;
+
+
+//== Composer
+//
+//##
+
+// Basics of a composer
+@composer-default-bg:                     #ffffff;
+@composer-default-write:                  #ededed;
+
+@composer-dark-bg:                        #222222;
+@composer-dark-write:                     #333333;
+
+
+//== Modal
+//
+//##
+
+// Basics of a modal
+@modal-dark-bg:                        #333333;
+
+//== Navs
+//
+//##
+
+// Basics of a navs
+@navs-default-bg:                     #ffffff;
+@navs-dark-bg:                        #222222;

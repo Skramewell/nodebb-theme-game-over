@@ -1,4 +1,32 @@
 .composer {
+	background-color: @composer-default-bg;
+
+	.composer-container {
+		.title-container {
+			.title {
+				color: @gray-dark;
+				border: 1px solid @composer-default-write;
+				&:focus {
+					box-shadow: 0px 0px 0px 2px @game-over-color;
+				}
+			}
+		}
+	}
+
+	.preview-container,
+	.write-container {
+		margin: 4px 15px !important;
+	}
+
+	.preview,
+	.write {
+		outline: none;
+		border-radius: @border-radius-base !important;
+		&:focus {
+			box-shadow: 0px 0px 0px 2px @game-over-color;
+		}
+	}
+
 	.preview {
 		overflow-y: auto;
 
@@ -13,5 +41,13 @@
 				margin-bottom: 0px;
 			}
 		}
+	}
+	.tags-container {
+		.bootstrap-tagsinput {
+			color: @gray-dark;
+		}
+	}
+	.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    	border-radius: 0 @border-radius-base @border-radius-base 0px;
 	}
 }
