@@ -9,23 +9,22 @@ body.theme-gameover.lights-out {
         color: @link-color-dark;
         text-decoration: underline;
     }
+    
 
     .navbar-default {
         background-color: @navbar-default-bg;
         border-color: @navbar-default-border;
-
-        .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+        .navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover {
             background-color: @game-over-darken-color !important;
-        }
-
-        i {
-            color: inherit;
         }
 
         #search-button {
             color: @navbar-default-link-color;
             &:hover {
-                color: @navbar-default-link-hover-color
+                color: @navbar-default-link-hover-color;
+                i {
+                    color: @navbar-default-link-hover-color;
+                }
             }
         }
     }
@@ -35,15 +34,24 @@ body.theme-gameover.lights-out {
 	    border-color: @category-dark-border-color;
     }
 
-    .panel-heading {
-        background-color: @category-dark-title-bg;
-        color: @text-color-dark;
-        border-color: @category-dark-border-color;
-    }
+    .panel-default {
+        border-color: @gray-base;
+        .panel-heading {
+            background-color: @category-dark-title-bg;
+            color: @text-color-dark;
+            border-color: @category-dark-border-color;
+        }
 
-    .panel-body {
-        background-color: @category-dark-bg;
-        color: @text-color-dark;
+        .panel-body {
+            background-color: @category-dark-bg;
+            color: @text-color-dark;
+        }
+
+        .panel-footer {
+            background-color: @category-dark-title-bg;
+            color: @text-color-dark;
+            border-color: @category-dark-border-color;
+        }
     }
 
     .categories, .category > ul {
@@ -159,18 +167,35 @@ body.theme-gameover.lights-out {
 
     .form-control {
         background-color: @gray-darker;
-        border-color: @gray-dark;
+        border-color: @gray-base;
         color: #ffffff;
     }
 
     .input-group-addon {
         background-color: @gray-darker;
-        border-color: @gray-dark;
+        border-color: @gray-base;
         color: #ffffff;
     }
 
     .users-container {
         .users-box{
+            background-color: @gray-darker;
+        }
+    }
+
+    .table {
+        border: 1px solid @gray-darker;
+        color: #ffffff;
+        &.table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: @table-bg-dark-accent;
+        }
+        &>tbody>tr>td, &>tbody>tr>th, &>tfoot>tr>td, &>tfoot>tr>th, &>thead>tr>td, &>thead>tr>th {
+            border-top: 1px solid @category-dark-border-color;
+        }
+        &>thead>tr>th {
+            border-bottom: 2px solid @category-dark-border-color;
+        }
+        &.table-hover>tbody>tr:hover {
             background-color: @gray-darker;
         }
     }

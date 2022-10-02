@@ -14,7 +14,7 @@
 		</div>
 		<!-- ENDIF hasFilter -->
 
-		<div class="btn-group pull-right" component="flags/bulk-actions">
+		<div class="btn-group pull-right bulk" component="flags/bulk-actions">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false" disabled="disabled">
 				<i class="fa fa-clone"></i> [[flags:bulk-actions]] <span class="caret"></span>
 			</button>
