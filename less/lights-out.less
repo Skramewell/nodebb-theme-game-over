@@ -10,6 +10,40 @@ body.theme-gameover.lights-out {
         text-decoration: underline;
     }
     
+    .btn-primary {
+        .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+    }
+
+    .btn-link {
+        color: @link-color;
+        &,
+        &:active,
+        &.active,
+        &[disabled],
+        fieldset[disabled] & {
+          background-color: transparent;
+        }
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          border-color: transparent;
+        }
+        &:hover,
+        &:focus {
+          color: @link-hover-color;
+          text-decoration: @link-hover-decoration;
+          background-color: transparent;
+        }
+        &[disabled],
+        fieldset[disabled] & {
+          &:hover,
+          &:focus {
+            color: @btn-link-disabled-color;
+            text-decoration: none;
+          }
+        }
+    }
 
     .navbar-default {
         background-color: @navbar-default-bg;
@@ -245,7 +279,8 @@ body.theme-gameover.lights-out {
             }
         }
     }
-    .chat-modal {
+    .chat-modal,
+    .expanded-chat {
         .modal-content {
             border: 1px solid @topic-dark-border-color;
         }
@@ -256,7 +291,12 @@ body.theme-gameover.lights-out {
         .modal-body {
             background-color: @gray-darker;
         }
-        .chat-content li.chat-message {
+        .message-body {
+            color: #ffffff;
+        }
+        .chat-content li.chat-message,
+        .chat-content li.chat-message[data-break=true] {
+            border-color: #000000;
             .chat-user a, .expanded-chat .chat-content li.chat-message .chat-user a {
                 color: #ffffff;
             }
@@ -264,5 +304,27 @@ body.theme-gameover.lights-out {
                 background-color: @category-dark-title-bg;
             }
         }
+    }
+
+    .chats-full {
+    // .chat-modal
+        [component="chat/main-wrapper"],
+        [component="chat/nav-wrapper"] {
+            background-color: @gray-darker;
+        }
+    }
+    .chats-list>li {
+        background-color: @gray-darker;
+        &:hover {
+            background-color: #000000;
+        }
+        &.bg-info {
+			background-color: #000000;
+		}
+    }
+    [component="chat/header"] {
+		border-bottom: 1px solid #000000;
+		background-color: @notifications-dark-unread-bg;
+        color: #ffffff;
     }
 }

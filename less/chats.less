@@ -1,10 +1,5 @@
 // Make chats page edge-to-edge
 .page-user-chats {
-	#content.container {
-		width: auto;
-		padding: 0;
-	}
-
 	.navbar {
 		margin-bottom: 0;
 	}
@@ -39,7 +34,9 @@
 	[component="chat/nav-wrapper"] {
 		flex: 1;
 		flex-direction: column;
-		padding: 0px 15px;
+		padding: 15px;
+		background-color: #ffffff;
+		border-radius: @border-radius-base;
 		.chats-list {
 			flex: 1;
 			overflow-y: auto;
@@ -91,6 +88,10 @@
 	[component="chat/main-wrapper"] {
 		flex: 3;
 		padding-bottom: 15px;
+		margin-left: 15px;
+		background-color: #ffffff;
+		border-radius: @border-radius-base;
+		padding: 15px;
 		.alert {
 			margin: 1em;
 		}
@@ -109,6 +110,9 @@
 	[component="chat/header"] {
 		padding: @panel-heading-padding;
 		border-bottom: 1px solid @modal-header-border-color;
+		background-color: @gray-lighter;
+		border-radius: @border-radius-base;
+		border-color: @navbar-default-toggle-border-color;
 
 		span {
 			font-weight: 500;
@@ -186,17 +190,21 @@
 
 	> li {
 		display: flex;
-		align-items: center;
 		position: relative;
 		clear: both;
 		list-style-type: none;
-		height: 90px;
+		height: 95px;
+		padding: 10px;
+		background-color: #ffffff;
 		.pointer;
-
 		border-left: 1px solid;
 		border-right: 1px solid;
 		border-bottom: 1px solid;
 		border-color: @gray-lighter;
+
+		&.bg-info {
+			background-color: @gray-lighter;
+		}
 
 		&.typing {
 			.username:after {
@@ -226,6 +234,7 @@
 					text-overflow: ellipsis;
 					max-width: 350px;
 					display: inline-block;
+					padding: 5px;
 				}
 			}
 		}
@@ -284,8 +293,8 @@
 			margin-bottom: 0.5rem;
 			z-index: 1;
 			position: absolute;
-			bottom: 2px;
-			left: 53px;
+			bottom: 5px;
+			left: 4px;
 
 			li {
 				display: inline-block;
@@ -298,7 +307,6 @@
 				}
 
 				.avatar {
-					border: 2px solid white;
 					width: 28px;
 					height: 28px;
 					line-height: 26px;
@@ -313,14 +321,25 @@
 
 		.main-avatar {
 			.avatar {
-				height: 65px;
-				width: 65px;
-				font-size: 40px;
+				height: 35px;
+				width: 35px;
+				font-size: 20px;
 				border-radius: 100%;
 				background: @gray-lighter;
 			}
 		}
 	}
+
+	&[component="chat/recent"] {
+		border-top-left-radius: @border-radius-base;
+		border-top-right-radius: @border-radius-base;
+		[component="chat/recent/room"] {
+			&:last-child {
+				border-bottom-left-radius: @border-radius-base;
+				border-bottom-right-radius: @border-radius-base;
+			}
+		}
+	}	
 }
 
 .chat-modal {
@@ -478,8 +497,6 @@
 					position: absolute;
 					bottom: 5px;
 					right: 30px;
-					border: 1px solid @dropdown-border;
-					.box-shadow(0 6px 12px rgba(0,0,0,.175));
 
 					[data-action="restore"] {
 						display: none;

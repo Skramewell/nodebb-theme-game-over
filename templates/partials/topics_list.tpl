@@ -78,18 +78,18 @@
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
 			<!-- IF !reputation:disabled -->
 			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
-			<small>[[global:votes]]</small>
+			<small title="[[global:votes]]"><i class="fas fa-thumbs-up"></i> / <i class="fas fa-thumbs-down"></i></small>
 			<!-- END -->
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
-			<small>[[global:posts]]</small>
+			<small title="[[global:posts]]"><i class="fas fa-edit"></i></small>
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">
 			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
-			<small>[[global:views]]</small>
+			<small title="[[global:views]]"><i class="fas fa-eye"></i></small>
 		</div>
 
 		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">

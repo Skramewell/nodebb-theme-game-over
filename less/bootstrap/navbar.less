@@ -189,21 +189,27 @@
 // Custom header 
 .game-over-header {
   width: 100%;
-  height: 100px;
-  // background-color: #000;
-  // background-color: red;
-  // background: url(/assets/plugins/nodebb-theme-gameover/images/navbar-background.jpg) no-repeat center center fixed; 
+  height: 280px;
   background-image: url(/assets/plugins/nodebb-theme-gameover/images/navbar-background.jpg);
   background-repeat: no-repeat;
-  // background-size: 100% auto;
-  // background-size: auto 100%;
   background-position: center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  box-shadow: 0px 0px 4px 2px #000000;
   margin-bottom: 20px;
+  @media (max-width: @screen-md-max) {
+    height: 100px;
+  }
   .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+    .forum-logo {
+      height: 75px;
+    }
 
   }
 }
