@@ -24,6 +24,18 @@
 	flex-wrap: nowrap;
 	height: calc(100vh - var(--panel-offset));
 
+	.modal-header {
+		background-color: @gray-lighter;
+		color: @gray-dark;
+		border-top-left-radius: @border-radius-base;
+		border-top-right-radius: @border-radius-base;
+	}
+	.modal-body {
+		background-color: #ffffff;
+		border-bottom-left-radius: @border-radius-base;
+		border-bottom-right-radius: @border-radius-base;
+	}
+
 	[component="chat/nav-wrapper"] {
 		flex: 1;
 		flex-direction: column;
@@ -135,11 +147,15 @@
 			border: 0;
 			border: 1px solid @gray-lighter;
 			border-radius: 0;
+			border-top-left-radius: @border-radius-base;
+			border-bottom-left-radius: @border-radius-base;
 		}
 
 		[data-action="send"] {
 			width: 5em;
 			height: 100%;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
 		}
 
 		[component="chat/message/remaining"] {
@@ -170,10 +186,11 @@
 
 	> li {
 		display: flex;
+		align-items: center;
 		position: relative;
 		clear: both;
 		list-style-type: none;
-		height: 80px;
+		height: 90px;
 		.pointer;
 
 		border-left: 1px solid;
@@ -296,10 +313,10 @@
 
 		.main-avatar {
 			.avatar {
-				height: 80px;
-				width: 80px;
+				height: 65px;
+				width: 65px;
 				font-size: 40px;
-				border-radius: 0;
+				border-radius: 100%;
 				background: @gray-lighter;
 			}
 		}

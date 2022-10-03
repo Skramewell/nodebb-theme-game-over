@@ -362,7 +362,7 @@
 // Basics of a navbar
 @navbar-height:                    50px;
 @navbar-border-effect:             5px;
-@navbar-margin-bottom:             @line-height-computed;
+@navbar-margin-bottom:             0;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
@@ -824,8 +824,8 @@
 //##
 
 @close-font-weight:           bold;
-@close-color:                 #000;
-@close-text-shadow:           0 1px 0 #fff;
+@close-color:                 #7d7d7d;
+@close-text-shadow:           0 0 0 #000;
 
 
 //== Code
@@ -925,3 +925,16 @@
 // Basics of a navs
 @navs-default-bg:                     #ffffff;
 @navs-dark-bg:                        #222222;
+
+//== Notifications
+//
+//##
+
+// Basics of a notifications
+@notifications-default-bg:                     #ffffff;
+@notifications-default-unread-bg:              @gray-lighter;
+@notifications-default-hover-bg:               darken(@gray-lighter, 5%);
+
+@notifications-dark-bg:                     #222222;
+@notifications-dark-unread-bg:              #191919;
+@notifications-dark-hover-bg:               darken(#191919, 5%);

@@ -24,17 +24,6 @@
 				</div>
 				{{{ end }}}
 
-				<!-- IF brand:logo -->
-				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}?{config.cache-buster}" />
-				</a>
-				<!-- ENDIF brand:logo -->
-				<!-- IF config.showSiteTitle -->
-				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
-					<h1 class="navbar-brand forum-title">{config.siteTitle}</h1>
-				</a>
-				<!-- ENDIF config.showSiteTitle -->
-
 				<div component="navbar/title" class="visible-xs hidden">
 					<span></span>
 				</div>

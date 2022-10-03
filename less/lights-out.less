@@ -28,11 +28,6 @@ body.theme-gameover.lights-out {
             }
         }
     }
- 
-    .categories-title {
-        background-color: @category-dark-title-bg;
-	    border-color: @category-dark-border-color;
-    }
 
     .panel-default {
         border-color: @gray-base;
@@ -53,6 +48,11 @@ body.theme-gameover.lights-out {
             border-color: @category-dark-border-color;
         }
     }
+ 
+    .categories-title {
+        background-color: @category-dark-title-bg;
+	    border-color: @category-dark-border-color;
+    }
 
     .categories, .category > ul {
         > li {
@@ -60,6 +60,16 @@ body.theme-gameover.lights-out {
             border-color: @category-dark-border-color;
             box-shadow: 0 1px 1px @category-default-shadow;
         }
+    }
+
+    .tag-item {
+        &.in-list {
+            background: @category-dark-title-bg;
+        }
+    }
+
+    .category>ul>li .tag-list .tag {
+        background-color: @category-dark-title-bg;
     }
 
     .topic .topic-item.highlight, .category .category-item.highlight {
@@ -153,6 +163,7 @@ body.theme-gameover.lights-out {
 
     .modal-content {
         background-color: @modal-dark-bg;
+        border: 1px solid @topic-dark-border-color;
         color: #ffffff;
     }
 
@@ -197,6 +208,61 @@ body.theme-gameover.lights-out {
         }
         &.table-hover>tbody>tr:hover {
             background-color: @gray-darker;
+        }
+    }
+
+    .header {
+        .notifications-list,
+        .notification-list {
+            li {
+                background-color: @notifications-dark-bg;
+                &.unread {
+                    background-color: @notifications-dark-unread-bg;  
+                }
+                &:hover {
+                    background-color: @notifications-dark-hover-bg;
+                }
+            }
+        }
+        .notif-dropdown-link {
+            a {
+                color: #ffffff;
+                &:hover {
+                    background: @category-dark-title-bg;
+                }
+            }
+        }
+    }
+
+    .chat-list {
+		li {
+            background-color: @notifications-dark-bg;
+            &.unread {
+                background-color: @notifications-dark-unread-bg;  
+            }
+            &:hover {
+                background-color: @notifications-dark-hover-bg;
+            }
+        }
+    }
+    .chat-modal {
+        .modal-content {
+            border: 1px solid @topic-dark-border-color;
+        }
+        .modal-header {
+            background-color: @category-dark-title-bg;
+            color: #ffffff;
+        }
+        .modal-body {
+            background-color: @gray-darker;
+        }
+        .chat-content li.chat-message {
+            .chat-user a, .expanded-chat .chat-content li.chat-message .chat-user a {
+                color: #ffffff;
+            }
+            .message-body-wrapper:hover .message-body, .expanded-chat .chat-content li.chat-message .message-body-wrapper:hover .message-body {
+                background-color: @category-dark-title-bg;
+            }
         }
     }
 }

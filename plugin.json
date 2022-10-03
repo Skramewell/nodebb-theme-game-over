@@ -17,5 +17,8 @@
 		"persona/quickreply.js": "public/modules/quickreply.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
-	"languages": "languages"
+	"languages": "languages",
+	"staticDirs": {
+        "images": "public/images"
+    }
 }
