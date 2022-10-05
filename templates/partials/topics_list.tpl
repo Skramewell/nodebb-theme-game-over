@@ -84,7 +84,7 @@
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
-			<small title="[[global:posts]]"><i class="fas fa-edit"></i></small>
+			<small title="[[global:posts]]"><i class="fas fa-comment"></i></small>
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">

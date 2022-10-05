@@ -10,11 +10,11 @@
 	],
 	"scripts": [
 		"public/modules/autohidingnavbar.js",
-		"public/persona.js"
+		"public/gameover.js"
 	],
 	"modules": {
-		"../admin/plugins/persona.js": "public/admin.js",
-		"persona/quickreply.js": "public/modules/quickreply.js",
+		"../admin/plugins/gameover.js": "public/admin.js",
+		"gameover/quickreply.js": "public/modules/quickreply.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
 	"languages": "languages",

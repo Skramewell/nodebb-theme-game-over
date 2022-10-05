@@ -25,7 +25,7 @@
 				</h3>
 			</div>
 			<div class="panel-body">
-				<h1>{group.displayName}</h1>
+				<h3>{group.displayName}</h3>
 				<p>{group.descriptionParsed}</p>
 				<!-- IF isAdmin -->
 				<div class="pull-right">
@@ -165,11 +165,11 @@
 					<div class="form-group">
 						<label for="memberPostCids">[[groups:details.member-post-cids]]</label>
 						<div class="row">
-							<div class="col-md-6">
-								<input id="memberPostCids" type="text" class="form-control" value="{group.memberPostCids}">
-							</div>
-							<div class="col-md-6 member-post-cids-selector">
+							<div class="col-md-12 member-post-cids-selector">
 								<!-- IMPORT partials/category-selector.tpl -->
+							</div>
+							<div class="col-md-12">
+								<input id="memberPostCids" type="text" class="form-control" value="{group.memberPostCids}">
 							</div>
 						</div>
 					</div>
@@ -244,7 +244,7 @@
 						</label>
 					</div>
 
-					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
+					<button class="btn btn-link pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
 					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
 				</form>
 			</div>
@@ -256,7 +256,7 @@
 			{{{end}}}
 		</div>
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 posts-time-line">
 		<div class="col-lg-11">
 			<!-- IF !posts.length -->
 			<div class="alert alert-info">[[groups:details.has_no_posts]]</div>

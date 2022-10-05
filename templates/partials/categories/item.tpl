@@ -31,11 +31,11 @@
 	<!-- IF !../link -->
 	<div class="col-md-1 hidden-sm hidden-xs stats">
 		<span class="{../unread-class} human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
-		<small>[[global:topics]]</small>
+		<small title="[[global:topics]]"><i class="fas fa-comments"></i></small>
 	</div>
 	<div class="col-md-1 hidden-sm hidden-xs stats">
 		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
-		<small>[[global:posts]]</small>
+		<small title="[[global:posts]]"><i class="fas fa-comment"></i></small>
 	</div>
 	<!-- IF !config.hideCategoryLastPost -->
 	<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">

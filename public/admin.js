@@ -1,13 +1,13 @@
 'use strict';
 
-define('admin/plugins/persona', ['settings'], function (Settings) {
+define('admin/plugins/gameover', ['settings'], function (Settings) {
 	var ACP = {};
 
 	ACP.init = function () {
-		Settings.load('persona', $('.persona-settings'));
+		Settings.load('gameover', $('.gameover-settings'));
 
 		$('#save').on('click', function () {
-			Settings.save('persona', $('.persona-settings'));
+			Settings.save('gameover', $('.gameover-settings'));
 		});
 	};
 

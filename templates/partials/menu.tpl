@@ -34,6 +34,12 @@
 				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
+					<!-- IF config.searchEnabled -->
+					<li id="search-menu">
+						<a href="{relative_path}/search" title="[[global:search]]"><i class="fa fa-search fa-fw"></i></a>
+					</li>
+					<!-- ENDIF config.searchEnabled -->
+
 					<li class="notifications dropdown text-center hidden-xs" component="notifications">
 						<a href="{relative_path}/notifications" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
 							<i component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
@@ -182,37 +188,6 @@
 					</li>
 				</ul>
 				<!-- ENDIF config.loggedIn -->
-				<!-- IF config.searchEnabled -->
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET">
-							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
-							<div class="hidden" id="search-fields">
-								<div class="form-group">
-									<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
-									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
-								</div>
-								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
-							</div>
-						</form>
-						<div id="quick-search-container" class="quick-search-container hidden">
-							<div class="checkbox filter-category">
-								<label>
-									<input type="checkbox" checked><span class="name"></span>
-								</label>
-							</div>
-							<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
-							<div class="quick-search-results-container"></div>
-						</div>
-					</li>
-					<li class="visible-xs" id="search-menu">
-						<a href="{relative_path}/search">
-							<i class="fa fa-search fa-fw"></i> [[global:search]]
-						</a>
-					</li>
-				</ul>
-				<!-- ENDIF config.searchEnabled -->
-
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
 						<a href="#" id="reconnect" class="hide" title="[[global:reconnecting-message, {config.siteTitle}]]">

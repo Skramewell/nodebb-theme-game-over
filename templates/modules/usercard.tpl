@@ -1,4 +1,4 @@
-<div class="persona-usercard">
+<div class="gameover-usercard">
 	<a href="{config.relative_path}/user/{userslug}">
 		<!-- IF picture -->
 		<div class="usercard-picture" style="background-image:url({picture})"></div>
@@ -25,7 +25,7 @@
 				<span class="human-readable-number">{reputation}</span>
 			</div>
 
-			<button class="btn-morph persona-fab <!-- IF banned --> hide<!-- ENDIF banned -->">
+			<button class="btn-morph gameover-fab <!-- IF banned --> hide<!-- ENDIF banned -->">
 				<span>
 					<span class="s1"></span>
 					<span class="s2"></span>

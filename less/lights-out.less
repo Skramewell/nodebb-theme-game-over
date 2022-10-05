@@ -2,17 +2,40 @@ body.theme-gameover.lights-out {
     background: none repeat scroll 0 0 @body-bg-dark;
     color: @text-color-dark;
 
+    a {
+        color: @link-color;
+        text-decoration: none;
+    }
+
     a.permalink,
     a.permalink:active,
     a.permalink:focus,
     a.permalink:hover {
-        color: @link-color-dark;
+        color: @link-color;
         text-decoration: underline;
     }
+
+
     
-    .btn-primary {
-        .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+    .btn-default {
+      .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border) !important;
     }
+    .btn-primary {
+      .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border) !important;
+    }
+    .btn-success {
+      .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border) !important;
+    }
+    .btn-info {
+      .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border) !important;
+    }
+    .btn-warning {
+      .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border) !important;
+    }
+    .btn-danger {
+      .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border) !important;
+    }
+      
 
     .btn-link {
         color: @link-color;
@@ -106,6 +129,10 @@ body.theme-gameover.lights-out {
         background-color: @category-dark-title-bg;
     }
 
+    .category>ul>li:not(.unread) h2 a {
+        color: @gray-lighter;
+    }
+
     .topic .topic-item.highlight, .category .category-item.highlight {
         background-color: @category-dark-title-bg;
     }
@@ -141,6 +168,16 @@ body.theme-gameover.lights-out {
             box-shadow: 0 1px 1px @category-dark-shadow;
             border-color: @category-dark-border-color;
         }
+        .pagination-block {
+            background-color: @gray-darker;
+            .pagination-text {
+                color: @gray-lighter;
+            }
+        } 
+    }
+
+    .posts-list .posts-list-item .topic-title {
+        color: @text-color-dark;
     }
 
     .breadcrumb {
@@ -156,14 +193,14 @@ body.theme-gameover.lights-out {
 
     .composer {
         background-color: @composer-dark-bg;
-        color: #ffffff;
+        color: @text-color-dark;
         .formatting-bar .formatting-group li {
-            color: #ffffff;
+            color: @text-color-dark;
         }
         .composer-container {
             .title-container {
                 .title {
-				    color: #ffffff;
+				    color: @text-color-dark;
                     background: @composer-dark-write;
                     border: 1px solid @composer-dark-write;
                 }
@@ -186,7 +223,7 @@ body.theme-gameover.lights-out {
         }
         .tags-container {
             .bootstrap-tagsinput {
-				color: #ffffff;
+				color: @text-color-dark;
                 background-color: @composer-dark-bg;
             }
         }
@@ -198,14 +235,14 @@ body.theme-gameover.lights-out {
     .modal-content {
         background-color: @modal-dark-bg;
         border: 1px solid @topic-dark-border-color;
-        color: #ffffff;
+        color: @text-color-dark;
     }
 
     .nav-pills {
         > li {
             > a {
             background-color: @navs-dark-bg;
-            color: #ffffff;
+            color: @text-color-dark;
             }
         }
     }
@@ -213,13 +250,13 @@ body.theme-gameover.lights-out {
     .form-control {
         background-color: @gray-darker;
         border-color: @gray-base;
-        color: #ffffff;
+        color: @text-color-dark;
     }
 
     .input-group-addon {
         background-color: @gray-darker;
         border-color: @gray-base;
-        color: #ffffff;
+        color: @text-color-dark;
     }
 
     .users-container {
@@ -230,7 +267,7 @@ body.theme-gameover.lights-out {
 
     .table {
         border: 1px solid @gray-darker;
-        color: #ffffff;
+        color: @text-color-dark;
         &.table-striped>tbody>tr:nth-of-type(odd) {
             background-color: @table-bg-dark-accent;
         }
@@ -260,7 +297,7 @@ body.theme-gameover.lights-out {
         }
         .notif-dropdown-link {
             a {
-                color: #ffffff;
+                color: @text-color-dark;
                 &:hover {
                     background: @category-dark-title-bg;
                 }
@@ -286,19 +323,19 @@ body.theme-gameover.lights-out {
         }
         .modal-header {
             background-color: @category-dark-title-bg;
-            color: #ffffff;
+            color: @text-color-dark;
         }
         .modal-body {
             background-color: @gray-darker;
         }
         .message-body {
-            color: #ffffff;
+            color: @text-color-dark;
         }
         .chat-content li.chat-message,
         .chat-content li.chat-message[data-break=true] {
-            border-color: #000000;
+            border-color: @topic-dark-border-color;
             .chat-user a, .expanded-chat .chat-content li.chat-message .chat-user a {
-                color: #ffffff;
+                color: @text-color-dark;
             }
             .message-body-wrapper:hover .message-body, .expanded-chat .chat-content li.chat-message .message-body-wrapper:hover .message-body {
                 background-color: @category-dark-title-bg;
@@ -321,10 +358,58 @@ body.theme-gameover.lights-out {
         &.bg-info {
 			background-color: #000000;
 		}
+        .teaser-content {
+            color: @text-color-dark;
+        }
     }
     [component="chat/header"] {
-		border-bottom: 1px solid #000000;
+		border-bottom: 1px solid @topic-dark-border-color;
 		background-color: @notifications-dark-unread-bg;
-        color: #ffffff;
+        color: @text-color-dark;
+    }
+
+    .posts-time-line {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+    }
+    
+    .account {
+        .profile {
+            background-color: @gray-darker;
+            border-color: @topic-dark-border-color;
+
+            .aboutme > p {
+                color: @text-color-dark;
+            }
+
+            .account-stats {
+                .stat-label {
+                    color: @text-color-dark;
+                }
+            }
+
+            .profile-meta {
+                color: #cccccc;
+                strong {
+                    color: @text-color-dark;
+                }
+            }
+        }
+        >.row .fullname {
+            color: @text-color-dark;
+        }
+    }
+    .page-user-info {
+        .recent-flags {
+            .timestamp {
+                color: @text-color-dark;
+            }
+        }
+    
+        .ban-history {
+            .expiry {
+                color: @text-color-dark;
+            }
+        }
     }
 }

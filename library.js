@@ -11,7 +11,7 @@ const library = module.exports;
 library.init = async function (params) {
 	const { router, middleware } = params;
 	const routeHelpers = require.main.require('./src/routes/helpers');
-	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', [], controllers.renderAdminPage);
+	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/gameover', [], controllers.renderAdminPage);
 
 	routeHelpers.setupPageRoute(router, '/user/:userslug/theme', [
 		middleware.exposeUid,
@@ -23,9 +23,9 @@ library.init = async function (params) {
 
 library.addAdminNavigation = async function (header) {
 	header.plugins.push({
-		route: '/plugins/persona',
+		route: '/plugins/gameover',
 		icon: 'fa-paint-brush',
-		name: 'Persona Theme',
+		name: 'GameOver Theme',
 	});
 	return header;
 };
@@ -35,7 +35,7 @@ library.addProfileItem = async (data) => {
 		id: 'theme',
 		route: 'theme',
 		icon: 'fa-paint-brush',
-		name: await translator.translate('[[persona:settings.title]]'),
+		name: await translator.translate('[[gameover:settings.title]]'),
 		visibility: {
 			self: true,
 			other: false,
@@ -79,7 +79,7 @@ library.defineWidgetAreas = async function (areas) {
 };
 
 library.getThemeConfig = async function (config) {
-	const settings = await meta.settings.get('persona');
+	const settings = await meta.settings.get('gameover');
 	config.hideSubCategories = settings.hideSubCategories === 'on';
 	config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
 	config.enableQuickReply = settings.enableQuickReply === 'on';
@@ -87,7 +87,7 @@ library.getThemeConfig = async function (config) {
 };
 
 library.addUserToTopic = async function (hookData) {
-	const settings = await meta.settings.get('persona');
+	const settings = await meta.settings.get('gameover');
 	if (settings.enableQuickReply === 'on') {
 		if (hookData.req.user) {
 			const userData = await user.getUserData(hookData.req.user.uid);
