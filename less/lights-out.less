@@ -15,8 +15,6 @@ body.theme-gameover.lights-out {
         text-decoration: underline;
     }
 
-
-    
     .btn-default {
       .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border) !important;
     }
@@ -181,12 +179,18 @@ body.theme-gameover.lights-out {
     }
 
     .breadcrumb {
+        background-color: @breadcrumb-bg-dark;
+        border-color: @category-dark-border-color;
+        .fa {
+            margin-left: 10px;
+            color: @breadcrumb-color-dark;
+        }
         > li {
           + li:before {
-            color: @breadcrumb-color;
+            color: @breadcrumb-color-dark;
           }
           a {
-            color: @breadcrumb-color;
+            color: @breadcrumb-color-dark;
           }
         }
     }

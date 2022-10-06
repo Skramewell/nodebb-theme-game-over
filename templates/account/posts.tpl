@@ -1,7 +1,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="row">
+	<div class="row posts-time-line">
 		<h1>{title}</h1>
 
 		<!-- IF !posts.length -->
