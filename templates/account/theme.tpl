@@ -1,7 +1,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<p>[[gameover:settings.intro]]</p>
+	<div class="well">[[gameover:settings.intro]]</div>
 
 	<hr />
 

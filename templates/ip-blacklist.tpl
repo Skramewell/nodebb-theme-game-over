@@ -5,9 +5,9 @@
 		<p class="lead">
 			[[ip-blacklist:lead]]
 		</p>
-		<p>
+		<div class="well">
 			[[ip-blacklist:description]]
-		</p>
+		</div>
 
 		<div class="row">
 			<div class="col-sm-6">

@@ -10,13 +10,25 @@ body.theme-gameover.lights-out {
             color: @link-hover-color;
             text-decoration: underline;
         }
+<<<<<<< Updated upstream
+=======
+        &.list-group-item {
+            color: @gray-lighter;
+            &:focus,
+            &:hover  {
+                background-color: @category-dark-title-bg;
+                text-decoration: none;
+                color: @gray-lighter;
+            }
+        }
+>>>>>>> Stashed changes
     }
 
     a.permalink,
     a.permalink:active,
     a.permalink:focus,
     a.permalink:hover {
-        color: @link-color;
+        color: @gray-light;
         text-decoration: underline;
     }
 
@@ -78,13 +90,23 @@ body.theme-gameover.lights-out {
         border-color: @category-dark-title-bg;
     }
 
+<<<<<<< Updated upstream
+=======
+    .well {
+        background-color: @gray-darker;
+        border-color: @category-dark-title-bg;
+    }
+
+>>>>>>> Stashed changes
     .navbar-default {
         background-color: @navbar-default-bg;
         border-color: @navbar-default-border;
         .navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover {
             background-color: @game-over-darken-color !important;
         }
-
+        .navbar-nav>li>a {
+            color: #fff;
+        }
         #search-button {
             color: @navbar-default-link-color;
             &:hover {
@@ -94,6 +116,10 @@ body.theme-gameover.lights-out {
                 }
             }
         }
+    }
+
+    .account .cover .avatar-wrapper {
+        border-color: @body-bg-dark;
     }
 
     .panel-default {
@@ -129,9 +155,17 @@ body.theme-gameover.lights-out {
         }
     }
 
+    .tag-list {
+        .tag {
+            background-color: @category-dark-bg;
+            border-color: @category-dark-border-color;
+        }
+    }
+
     .tag-item {
         &.in-list {
-            background: @category-dark-title-bg;
+            border-color: @category-dark-border-color;
+            background-color: @category-dark-title-bg;
         }
     }
 
@@ -282,7 +316,7 @@ body.theme-gameover.lights-out {
     }
 
     .table {
-        border: 1px solid @gray-darker;
+        border: 1px solid @category-dark-border-color;
         color: @text-color-dark;
         &.table-striped>tbody>tr:nth-of-type(odd) {
             background-color: @table-bg-dark-accent;
@@ -298,30 +332,30 @@ body.theme-gameover.lights-out {
         }
     }
 
-    .header {
-        .notifications-list,
-        .notification-list {
-            li {
-                background-color: @notifications-dark-bg;
-                &.unread {
-                    background-color: @notifications-dark-unread-bg;  
-                }
-                &:hover {
-                    background-color: @notifications-dark-hover-bg;
-                }
+    .notifications-list,
+    .notification-list {
+        li {
+            background-color: @notifications-dark-bg;
+            &.unread {
+                background-color: @notifications-dark-unread-bg;  
             }
-        }
-        .notif-dropdown-link {
-            a {
-                color: @text-color-dark;
-                &:hover {
-                    background: @category-dark-title-bg;
-                }
+            &:hover {
+                background-color: @notifications-dark-hover-bg;
             }
         }
     }
 
-    .chat-list {
+    .notif-dropdown-link {
+        border-color: @category-dark-border-color;
+        a {
+            color: @text-color-dark;
+            &:hover {
+                background: @category-dark-title-bg;
+            }
+        }
+    }
+
+   .chat-list {
 		li {
             background-color: @notifications-dark-bg;
             &.unread {
@@ -440,12 +474,50 @@ body.theme-gameover.lights-out {
         border-color: @list-group-border-dark;
     }
 
+<<<<<<< Updated upstream
     .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
         text-decoration: none;
         color: @gray-lighter;
         background-color: @category-dark-title-bg;
     }
 
+=======
+    .deco-none, .deco-none:link {
+        color: inherit;
+        text-decoration: inherit;
+        &:hover {
+            background-color: inherit !important;
+        }
+    }
+
+    .dropdown-menu {
+        border-color: @topic-dark-border-color;
+        li {
+            form {
+                .btn-link {
+                    color: @text-color-dark;
+                }
+
+                .btn-link:focus,
+                .btn-link:hover,
+                button:focus,
+                button:hover {
+                    text-decoration: none;
+                    color: @gray-lighter;
+                    background-color: @category-dark-title-bg;
+                }
+            }
+            a:focus,
+            a:hover {
+                text-decoration: none;
+                color: @gray-lighter;
+                background-color: @category-dark-title-bg;
+            }
+        }
+    }
+
+
+>>>>>>> Stashed changes
     .lead {
         background-color: @gray-darker;
         border-color: @topic-dark-border-color;
