@@ -295,3 +295,58 @@ a.permalink {
 		left: 0;
 	}
 }
+
+@keyframes flickerAnimation {
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+	0%   { opacity:1; }
+	50%  { opacity:0; }
+	100% { opacity:1; }
+}
+
+.gameOverStream {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    .gameOverStreamTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2C3E50;
+        color: #FFFFFF;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+    .gameOverStreamIcon {
+        font-size: 10px;
+        margin-right: 5px;
+        color: #ff5f5f;
+        -webkit-animation: flickerAnimation 2s infinite;
+        -moz-animation: flickerAnimation 2s infinite;
+        -o-animation: flickerAnimation 2s infinite;
+        animation: flickerAnimation 2s infinite;
+    }
+    .gameOverStreamVideo {
+        width: 824px;
+        height: 437px;
+        border: 5px solid #2C3E50;
+        border-radius: 10px;
+    }
+}

@@ -2,10 +2,13 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    line-height: 3em;
+    line-height: 2.5em;
     padding-left: 1rem;
     width: 100%;
-    background: rgba(240,240,240,.8);
+    background: @cookie-bg;
+    border-top: 1px solid @panel-default-border;
+    border-top-left-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
     z-index: @zindex-navbar-fixed;
     a {
         font-weight: bold;
