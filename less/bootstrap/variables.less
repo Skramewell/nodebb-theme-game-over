@@ -7,16 +7,18 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@game-over-color:        #2c3e50;
+@game-over-color:                #F27405;
+@game-over-darken-color:         darken(@game-over-color, 4%);
+@game-over-lighten-color:        lighten(@game-over-color, 20%);
 
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             #6c757d;
-@gray-lighter:           #eee;
+@gray-lighter:           #f5f5f5;
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:         darken(@game-over-color, 6.5%); // #337ab7
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -29,8 +31,10 @@
 
 //** Background color for `<body>`.
 @body-bg:               #ecf0f1;
+@body-bg-dark:          #333333;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
+@text-color-dark:       @gray-lighter;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -89,14 +93,14 @@
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-@padding-base-vertical:     10px;
-@padding-base-horizontal:   16px;
+@padding-base-vertical:     6px;
+@padding-base-horizontal:   10px;
 
-@padding-large-vertical:    10px;
-@padding-large-horizontal:  16px;
+@padding-large-vertical:    6px;
+@padding-large-horizontal:  10px;
 
 @padding-small-vertical:    5px;
-@padding-small-horizontal:  10px;
+@padding-small-horizontal:  6px;
 
 @padding-xs-vertical:       1px;
 @padding-xs-horizontal:     5px;
@@ -105,8 +109,8 @@
 @line-height-small:         1.5;
 
 @border-radius-base:        8px;
-@border-radius-large:       0;
-@border-radius-small:       0;
+@border-radius-large:       8px;
+@border-radius-small:       8px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -131,9 +135,10 @@
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               #f9f9f9;
+@table-bg-accent:               #f5f5f5;
+@table-bg-dark-accent:          #191919;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                #f5f5f5;
+@table-bg-hover:                #ffffff;
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
@@ -356,7 +361,9 @@
 // Basics of a navbar
 @navbar-height:                    50px;
 @navbar-border-effect:             5px;
-@navbar-margin-bottom:             @line-height-computed;
+@navbar-cover-height:              280px;
+@navbar-mobile-cover-height:       100px;
+@navbar-margin-bottom:             0;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
@@ -364,14 +371,14 @@
 
 @navbar-default-color:             #333;
 @navbar-default-bg:                @game-over-color;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            @game-over-darken-color;
 
 // Navbar links
 @navbar-default-link-color:                #FFFFFF;
-@navbar-default-link-hover-color:          darken(@navbar-default-link-color, 40%);
+@navbar-default-link-hover-color:          darken(@game-over-color, 40%);
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         #FFFFFF;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-bg:            @game-over-darken-color;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -667,8 +674,10 @@
 
 //** Background color on `.list-group-item`
 @list-group-bg:                 #fff;
+@list-group-bg-dark:            @gray-darker;
 //** `.list-group-item` border color
 @list-group-border:             #ddd;
+@list-group-border-dark:        #000;
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
@@ -757,8 +766,8 @@
 //
 //##
 
-@well-bg:                     #f5f5f5;
-@well-border:                 darken(@well-bg, 7%);
+@well-bg:                     #ffffff;
+@well-border:                 @category-default-border-color;
 
 
 //== Badges
@@ -787,11 +796,13 @@
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-bg:                 @gray-lighter;
+@breadcrumb-bg-dark:            @category-dark-title-bg;
 //** Breadcrumb text color
-@breadcrumb-color:              #ccc;
+@breadcrumb-color:              @gray-dark;
+@breadcrumb-color-dark:         @gray-lighter;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @gray-light;
+@breadcrumb-active-color:       @game-over-color;
 //** Textual separator for between breadcrumb elements
 @breadcrumb-separator:          "/";
 
@@ -818,8 +829,8 @@
 //##
 
 @close-font-weight:           bold;
-@close-color:                 #000;
-@close-text-shadow:           0 1px 0 #fff;
+@close-color:                 #7d7d7d;
+@close-text-shadow:           0 0 0 #000;
 
 
 //== Code
@@ -845,7 +856,7 @@
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 //** Text muted color
-@text-muted:                  @gray-light;
+@text-muted:                  @gray-dark;
 //** Abbreviations and acronyms border color
 @abbr-border-color:           @gray-light;
 //** Headings small color
@@ -861,7 +872,7 @@
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
-@hr-border:                   @gray-lighter;
+@hr-border:                   @category-default-border-color;
 
 
 //== Category
@@ -869,10 +880,15 @@
 //##
 
 // Basics of a category
-@category-default-bg:                       #ffffff;
-@category-default-shadow:                   rgb(0 0 0 / 5%);
-@category-default-border-color:             #dddddd;
-@category-default-title-bg:                 #f5f5f5;
+@category-default-bg:                    #ffffff;
+@category-default-shadow:                rgb(0 0 0 / 5%);
+@category-default-border-color:          #dddddd;
+@category-default-title-bg:              #f5f5f5;
+
+@category-dark-bg:                       #222222;
+@category-dark-shadow:                   rgb(0 0 0 / 5%);
+@category-dark-border-color:             #000000;
+@category-dark-title-bg:                 #191919;
 
 //== Topic
 //
@@ -882,3 +898,56 @@
 @topic-default-bg:                       #ffffff;
 @topic-default-shadow:                   rgb(0 0 0 / 5%);
 @topic-default-border-color:             #dddddd;
+
+@topic-dark-bg:                          #222222;
+@topic-dark-shadow:                      rgb(0 0 0 / 5%);
+@topic-dark-border-color:                #000000;
+
+
+//== Composer
+//
+//##
+
+// Basics of a composer
+@composer-default-bg:                     #ffffff;
+@composer-default-write:                  #ededed;
+
+@composer-dark-bg:                        #222222;
+@composer-dark-write:                     #333333;
+
+
+//== Modal
+//
+//##
+
+// Basics of a modal
+@modal-dark-bg:                        #333333;
+
+//== Navs
+//
+//##
+
+// Basics of a navs
+@navs-default-bg:                     #ffffff;
+@navs-dark-bg:                        #222222;
+
+//== Notifications
+//
+//##
+
+// Basics of a notifications
+@notifications-default-bg:                     #ffffff;
+@notifications-default-unread-bg:              @gray-lighter;
+@notifications-default-hover-bg:               darken(@gray-lighter, 5%);
+
+@notifications-dark-bg:                     #222222;
+@notifications-dark-unread-bg:              #191919;
+@notifications-dark-hover-bg:               darken(#191919, 5%);
+
+//== Cookie consent
+//
+//##
+
+// Basics of a cookie consent
+@cookie-bg:             rgba(#ffffff, .8);
+@cookie-dark-bg:        rgba(#222222, .9);

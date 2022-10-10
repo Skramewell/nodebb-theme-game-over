@@ -18,6 +18,7 @@
 			text-align: left;
 			list-style-type: none;
 			padding: .75em 0.5em;
+			background-color: @notifications-default-bg;
 
 			&:hover {
 				background-color: @dropdown-link-hover-bg;
@@ -78,10 +79,10 @@
 			}
 
 			&.unread {
-				background-color: @state-warning-bg;
+				background-color: @notifications-default-unread-bg;
 
 				&:hover {
-					background-color: darken(@state-warning-bg, 5%);
+					background-color: @notifications-default-hover-bg;
 				}
 
 				.mark-read:after {
@@ -97,10 +98,11 @@
 		> li {
 			.pointer;
 			width: 500px;
-			padding: 0;
+			padding: 10px;
 			margin: 0;
 			gap: 0;
 			overflow-y: hidden;
+			background-color: @notifications-default-bg;
 
 			.notification-chat-content {
 				padding: 0.5rem;
@@ -238,12 +240,8 @@
 
 	.fa {
 		margin-left: 10px;
-		color: rgb(153, 153, 153);
+		color: @breadcrumb-color;
 	}
-
-	font-size: 16px;
-	padding: 0;
-	background: none;
 
 	@media (max-width: @screen-xs-max) {
 		li {

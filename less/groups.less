@@ -12,20 +12,22 @@
 }
 
 .groups.details {
-	margin-top: 200px;
-
 	[component="groups/cover"] {
 		background-size: cover;
 		background-repeat: no-repeat;
-		min-height: 200px;
+		height: @navbar-cover-height;;
 		position: relative;
 		margin-bottom: 1em;
 		background-origin: content-box;
 		width: 100%;
-		top: calc(var(--panel-offset) - 20px);
+		top: calc(var(--panel-offset));
 		position: absolute;
 		left: auto;
 		right: 0px;
+
+		@media (max-width: @screen-md-max) {
+			height: @navbar-mobile-cover-height;
+		}
 
 		&:hover {
 			.controls {
@@ -35,8 +37,8 @@
 
 		.controls {
 			text-align: center;
-			min-height: 200px;
-			line-height: 200px;
+			min-height: @navbar-cover-height;
+			line-height: @navbar-cover-height;
 			opacity: 0;
 			.transition(opacity .15s linear);
 			cursor: pointer;
@@ -117,7 +119,7 @@
 		}
 	}
 
-	h1 {
+	h3 {
 		overflow-wrap: break-word;
 		margin-top: 0;
 	}
@@ -134,14 +136,12 @@
 	}
 
 	@media (min-width: @screen-md-min) {
-		margin-top: 300px;
-
 		[component="groups/cover"] {
-			min-height: 300px;
+			height: @navbar-cover-height;
 
 			.controls {
-				min-height: 300px;
-				line-height: 300px;
+				min-height: @navbar-cover-height;
+				line-height: @navbar-cover-height;
 			}
 		}
 	}
@@ -155,6 +155,16 @@
 	.options {
 		.user-title-option span.label {
 			.group-label;
+		}
+	}
+
+	.member-post-cids-selector {
+		margin-bottom: 15px;
+		[component="category-selector"] {
+			width: 100%;
+			button {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -197,6 +207,16 @@
 			.truncated {
 				vertical-align: bottom;
 			}
+		}
+	}
+	.search {
+		margin-top: 20px;
+	}
+
+	@media (max-width: @screen-md-max) {
+		.create {
+			margin-top: 20px;
+			text-align: left;
 		}
 	}
 }

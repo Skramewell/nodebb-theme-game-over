@@ -1,8 +1,8 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
-	<h2>[[user:consent.title]]</h2>
+	<h2 class="h-title">[[user:consent.title]]</h2>
 	<p class="lead">[[user:consent.lead]]</p>
-	<p>[[user:consent.intro]]</p>
+	<div class="well">[[user:consent.intro]]</div>
 
 	<hr />
 
@@ -28,7 +28,7 @@
 					<!-- IF digest.enabled -->
 					<p>[[user:consent.digest_frequency, {digest.frequency}]]</p>
 					<!-- ELSE -->
-					[[user:consent.digest_off]]
+					<p>[[user:consent.digest_off]]</p>
 					<!-- END -->
 
 					<div class="text-center">

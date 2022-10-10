@@ -1,0 +1,521 @@
+body.theme-gameover.lights-out {
+    background: none repeat scroll 0 0 @body-bg-dark;
+    color: @text-color-dark;
+
+    a {
+        color: @link-color;
+        text-decoration: none;
+        &:focus, 
+        &:hover {
+            color: @link-hover-color;
+            text-decoration: underline;
+        }
+        &.list-group-item {
+            color: @gray-lighter;
+            &:focus,
+            &:hover  {
+                background-color: @category-dark-title-bg;
+                text-decoration: none;
+                color: @gray-lighter;
+            }
+        }
+    }
+
+    a.permalink,
+    a.permalink:active,
+    a.permalink:focus,
+    a.permalink:hover {
+        color: @gray-light;
+        text-decoration: underline;
+    }
+
+    .btn-default {
+      .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border) !important;
+    }
+    .btn-primary {
+      .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border) !important;
+    }
+    .btn-success {
+      .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border) !important;
+    }
+    .btn-info {
+      .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border) !important;
+    }
+    .btn-warning {
+      .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border) !important;
+    }
+    .btn-danger {
+      .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border) !important;
+    }
+      
+    .btn-link {
+        color: @link-color;
+        &,
+        &:active,
+        &.active,
+        &[disabled],
+        fieldset[disabled] & {
+          background-color: transparent;
+        }
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          border-color: transparent;
+        }
+        &:hover,
+        &:focus {
+          color: @link-hover-color;
+          text-decoration: @link-hover-decoration;
+          background-color: transparent;
+        }
+        &[disabled],
+        fieldset[disabled] & {
+          &:hover,
+          &:focus {
+            color: @btn-link-disabled-color;
+            text-decoration: none;
+          }
+        }
+    }
+
+    .text-muted {
+        color: @gray-lighter;
+    }
+
+    hr {
+        border-color: @category-dark-border-color;
+    }
+
+    .well {
+        background-color: @gray-darker;
+        border-color: @category-dark-border-color;
+    }
+
+    .navbar-default {
+        background-color: @navbar-default-bg;
+        border-color: @navbar-default-border;
+        .navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover {
+            background-color: @game-over-darken-color !important;
+        }
+        .navbar-nav>li>a {
+            color: #fff;
+        }
+        #search-button {
+            color: @navbar-default-link-color;
+            &:hover {
+                color: @navbar-default-link-hover-color;
+                i {
+                    color: @navbar-default-link-hover-color;
+                }
+            }
+        }
+    }
+
+    .cookie-consent {
+        background: @cookie-dark-bg;
+        border-color: @category-dark-border-color;
+    }
+
+    .account .cover .avatar-wrapper {
+        border-color: @body-bg-dark;
+    }
+
+    .panel-default {
+        border-color: @gray-base;
+        .panel-heading {
+            background-color: @category-dark-title-bg;
+            color: @text-color-dark;
+            border-color: @category-dark-border-color;
+        }
+
+        .panel-body {
+            background-color: @category-dark-bg;
+            color: @text-color-dark;
+        }
+
+        .panel-footer {
+            background-color: @category-dark-title-bg;
+            color: @text-color-dark;
+            border-color: @category-dark-border-color;
+        }
+    }
+ 
+    .categories-title {
+        background-color: @category-dark-title-bg;
+	    border-color: @category-dark-border-color;
+    }
+
+    .categories, .category > ul {
+        > li {
+            background-color: @category-dark-bg;
+            border-color: @category-dark-border-color;
+            box-shadow: 0 1px 1px @category-default-shadow;
+        }
+    }
+
+    .tag-list {
+        .tag {
+            background-color: @category-dark-bg;
+            border-color: @category-dark-border-color;
+        }
+    }
+
+    .tag-item {
+        &.in-list {
+            border-color: @category-dark-border-color;
+            background-color: @category-dark-title-bg;
+        }
+    }
+
+    .category>ul>li .tag-list .tag {
+        background-color: @category-dark-title-bg;
+    }
+
+    .category>ul>li:not(.unread) h2 a {
+        color: @gray-lighter;
+    }
+
+    .topic .topic-item.highlight, .category .category-item.highlight {
+        background-color: @category-dark-title-bg;
+    }
+
+    .recent-replies {
+        .widget-topics {
+            border-bottom: 1px solid @category-dark-border-color;
+        }
+    }
+
+    .topic { 
+        .posts {
+            [component=post] {
+                background-color: @topic-dark-bg;
+                border-color: @topic-dark-border-color;
+                box-shadow: 0 1px 1px @topic-dark-shadow;
+            }
+
+            &.timeline .timeline-event .icon .avatar,
+            &.timeline .timeline-event .timeline-badge,
+            &.timeline>[component=post] .icon .avatar,
+            &.timeline>[component=post] .timeline-badge {
+                box-shadow: 0 0 0 .5rem @body-bg-dark;
+            }
+        }
+        .topic-list-header {
+            background-color: @category-dark-title-bg;
+            box-shadow: 0 1px 1px @category-dark-shadow;
+            border-color: @category-dark-border-color;
+        }
+        .topic-header {
+            background-color: @category-dark-title-bg;
+            box-shadow: 0 1px 1px @category-dark-shadow;
+            border-color: @category-dark-border-color;
+        }
+        .pagination-block {
+            background-color: @gray-darker;
+            .pagination-text {
+                color: @gray-lighter;
+            }
+        } 
+    }
+
+    .posts-list .posts-list-item .topic-title {
+        color: @text-color-dark;
+    }
+
+    .breadcrumb {
+        background-color: @breadcrumb-bg-dark;
+        border-color: @category-dark-border-color;
+        .fa {
+            margin-left: 10px;
+            color: @breadcrumb-color-dark;
+        }
+        > li {
+          + li:before {
+            color: @breadcrumb-color-dark;
+          }
+          a {
+            color: @breadcrumb-color-dark;
+          }
+        }
+    }
+
+    .composer {
+        background-color: @composer-dark-bg;
+        color: @text-color-dark;
+        .formatting-bar .formatting-group li {
+            color: @text-color-dark;
+        }
+        .composer-container {
+            .title-container {
+                .title {
+				    color: @text-color-dark;
+                    background: @composer-dark-write;
+                    border: 1px solid @composer-dark-write;
+                }
+            }
+        }
+        .title,
+        .preview,
+        .write {
+            background: @composer-dark-write;
+            border: 1px solid @composer-dark-write;
+            &:focus {
+                box-shadow: 0px 0px 0px 2px @game-over-color;
+            }
+        }
+        .preview {
+            border: 1px solid @composer-dark-write;
+            &:focus {
+                border: 2px solid @game-over-color;
+            }
+        }
+        .tags-container {
+            .bootstrap-tagsinput {
+				color: @text-color-dark;
+                background-color: @composer-dark-bg;
+            }
+        }
+        .formatting-bar .formatting-group li:hover {
+            background-color: @composer-dark-write;
+        }
+    }
+
+    .modal-content {
+        background-color: @modal-dark-bg;
+        border: 1px solid @topic-dark-border-color;
+        color: @text-color-dark;
+    }
+
+    .nav-pills {
+        > li {
+            > a {
+            background-color: @navs-dark-bg;
+            color: @text-color-dark;
+            }
+        }
+    }
+
+    .form-control {
+        background-color: @gray-darker;
+        border-color: @gray-base;
+        color: @text-color-dark;
+    }
+
+    .input-group-addon {
+        background-color: @gray-darker;
+        border-color: @gray-base;
+        color: @text-color-dark;
+    }
+
+    .users-container {
+        .users-box{
+            background-color: @gray-darker;
+        }
+    }
+
+    .table {
+        border: 1px solid @category-dark-border-color;
+        color: @text-color-dark;
+        &.table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: @table-bg-dark-accent;
+        }
+        &>tbody>tr>td, &>tbody>tr>th, &>tfoot>tr>td, &>tfoot>tr>th, &>thead>tr>td, &>thead>tr>th {
+            border-top: 1px solid @category-dark-border-color;
+        }
+        &>thead>tr>th {
+            border-bottom: 2px solid @category-dark-border-color;
+        }
+        &.table-hover>tbody>tr:hover {
+            background-color: @gray-darker;
+        }
+    }
+
+    .notifications-list,
+    .notification-list {
+        li {
+            background-color: @notifications-dark-bg;
+            &.unread {
+                background-color: @notifications-dark-unread-bg;  
+            }
+            &:hover {
+                background-color: @notifications-dark-hover-bg;
+            }
+        }
+    }
+
+    .notif-dropdown-link {
+        border-color: @category-dark-border-color;
+        a {
+            color: @text-color-dark;
+            &:hover {
+                background: @category-dark-title-bg;
+            }
+        }
+    }
+
+   .chat-list {
+		li {
+            background-color: @notifications-dark-bg;
+            &.unread {
+                background-color: @notifications-dark-unread-bg;  
+            }
+            &:hover {
+                background-color: @notifications-dark-hover-bg;
+            }
+        }
+    }
+    .chat-modal,
+    .expanded-chat {
+        .modal-content {
+            border: 1px solid @topic-dark-border-color;
+        }
+        .modal-header {
+            background-color: @category-dark-title-bg;
+            color: @text-color-dark;
+        }
+        .modal-body {
+            background-color: @gray-darker;
+        }
+        .message-body {
+            color: @text-color-dark;
+        }
+        .chat-content li.chat-message,
+        .chat-content li.chat-message[data-break=true] {
+            border-color: @topic-dark-border-color;
+            .chat-user a, .expanded-chat .chat-content li.chat-message .chat-user a {
+                color: @text-color-dark;
+            }
+            .message-body-wrapper:hover .message-body, .expanded-chat .chat-content li.chat-message .message-body-wrapper:hover .message-body {
+                background-color: @category-dark-title-bg;
+            }
+        }
+    }
+
+    .chats-full {
+    // .chat-modal
+        [component="chat/main-wrapper"],
+        [component="chat/nav-wrapper"] {
+            background-color: @gray-darker;
+        }
+    }
+    .chats-list>li {
+        background-color: @gray-darker;
+        &:hover {
+            background-color: #000000;
+        }
+        &.bg-info {
+			background-color: #000000;
+		}
+        .teaser-content {
+            color: @text-color-dark;
+        }
+    }
+    [component="chat/header"] {
+		border-bottom: 1px solid @topic-dark-border-color;
+		background-color: @notifications-dark-unread-bg;
+        color: @text-color-dark;
+    }
+
+    .posts-time-line {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+    }
+
+    .h-title {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+    }
+    
+    .account {
+        .profile {
+            background-color: @gray-darker;
+            border-color: @topic-dark-border-color;
+
+            .aboutme > p {
+                color: @text-color-dark;
+            }
+
+            .account-stats {
+                .stat-label {
+                    color: @text-color-dark;
+                }
+            }
+
+            .profile-meta {
+                color: #cccccc;
+                strong {
+                    color: @text-color-dark;
+                }
+            }
+        }
+        >.row .fullname {
+            color: @text-color-dark;
+        }
+    }
+
+    &.page-user-info {
+        .recent-flags {
+            .timestamp {
+                color: @text-color-dark;
+            }
+        }
+    
+        .ban-history {
+            .expiry {
+                color: @text-color-dark;
+            }
+        }
+    }
+
+    .list-group-item {
+        background-color: @list-group-bg-dark;
+        border-color: @list-group-border-dark;
+    }
+
+    .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+        text-decoration: none;
+        color: @gray-lighter;
+        background-color: @category-dark-title-bg;
+    }
+
+    .deco-none, .deco-none:link {
+        color: inherit;
+        text-decoration: inherit;
+        &:hover {
+            background-color: inherit !important;
+        }
+    }
+
+    .dropdown-menu {
+        border-color: @topic-dark-border-color;
+        li {
+            form {
+                .btn-link {
+                    color: @text-color-dark;
+                }
+
+                .btn-link:focus,
+                .btn-link:hover,
+                button:focus,
+                button:hover {
+                    text-decoration: none;
+                    color: @gray-lighter;
+                    background-color: @category-dark-title-bg;
+                }
+            }
+            a:focus,
+            a:hover {
+                text-decoration: none;
+                color: @gray-lighter;
+                background-color: @category-dark-title-bg;
+            }
+        }
+    }
+
+
+    .lead {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+    }
+}

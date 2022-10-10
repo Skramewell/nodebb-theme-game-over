@@ -5,8 +5,8 @@
 	{{{end}}}
 </div>
 <div class="row register">
-	<div class="row {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
-		<div class="{register_window:spansize}">
+	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
+		<div class="{register_window:spansize} well">
 			<div class="register-block">
 				<div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify" >
 					<strong>[[error:registration-error]]</strong>

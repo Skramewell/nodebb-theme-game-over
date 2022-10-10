@@ -16,7 +16,7 @@ $(document).ready(function () {
 		const headerEl = document.getElementById('header-menu');
 
 		if (!headerEl) {
-			console.warn('[persona/updatePanelOffset] Could not find #header-menu, panel offset unchanged.');
+			console.warn('[gameover/updatePanelOffset] Could not find #header-menu, panel offset unchanged.');
 			return;
 		}
 
@@ -43,9 +43,9 @@ $(document).ready(function () {
 			let preference = ['xs', 'sm'];
 
 			try {
-				preference = JSON.parse(Storage.getItem('persona:navbar:autohide')) || preference;
+				preference = JSON.parse(Storage.getItem('gameover:navbar:autohide')) || preference;
 			} catch (e) {
-				console.warn('[persona/settings] Unable to parse value for navbar autohiding');
+				console.warn('[gameover/settings] Unable to parse value for navbar autohiding');
 			}
 			var env = utils.findBootstrapEnvironment();
 			// if env didn't change don't destroy and recreate
@@ -66,7 +66,7 @@ $(document).ready(function () {
 					navbarEl.autoHidingNavbar('setDisableAutohide', false);
 				});
 
-			hooks.fire('filter:persona.configureNavbarHiding', {
+			hooks.fire('filter:gameover.configureNavbarHiding', {
 				resizeEnvs: preference,
 			}).then(({ resizeEnvs }) => {
 				if (resizeEnvs.includes(env)) {
@@ -217,7 +217,7 @@ $(document).ready(function () {
 			// initialization
 
 			var chatMenuVisible = app.user && parseInt(app.user.uid, 10);
-			var swapped = !!Storage.getItem('persona:menus:legacy-layout');
+			var swapped = !!Storage.getItem('gameover:menus:legacy-layout');
 			var margin = window.innerWidth;
 
 			if (swapped) {
@@ -409,7 +409,7 @@ $(document).ready(function () {
 			}
 		}
 
-		$('.persona-usercard').remove();
+		$('.gameover-usercard').remove();
 
 		if (parseInt(data.uid, 10) === 0) {
 			return false;
@@ -452,7 +452,7 @@ $(document).ready(function () {
 
 	function setupCardRemoval(card) {
 		function removeCard(ev) {
-			if ($(ev.target).closest('.persona-usercard').length === 0) {
+			if ($(ev.target).closest('.gameover-usercard').length === 0) {
 				card.fadeOut(function () {
 					card.remove();
 				});
@@ -494,7 +494,7 @@ $(document).ready(function () {
 		$(window).on('action:ajaxify.end', function (ev, data) {
 			if (data.url && data.url.match('^topic/')) {
 				if (config.enableQuickReply) {
-					require(['persona/quickreply'], function (quickreply) {
+					require(['gameover/quickreply'], function (quickreply) {
 						if (quickreply) {
 							quickreply.init();
 						}

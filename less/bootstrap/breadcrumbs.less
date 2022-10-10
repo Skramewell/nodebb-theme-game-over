@@ -9,6 +9,7 @@
   list-style: none;
   background-color: @breadcrumb-bg;
   border-radius: @border-radius-base;
+  border: 1px solid @category-default-border-color;
 
   > li {
     display: inline-block;
@@ -18,9 +19,15 @@
       padding: 0 5px;
       color: @breadcrumb-color;
     }
+
+    a {
+      color: @breadcrumb-color;
+    }
   }
 
   > .active {
-    color: @breadcrumb-active-color;
+    [itemprop="name"] {
+      color: @breadcrumb-active-color;
+    }
   }
 }

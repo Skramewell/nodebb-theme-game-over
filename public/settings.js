@@ -12,15 +12,15 @@ define('forum/account/theme', ['forum/account/header', 'storage', 'settings', 'a
 		const saveEl = document.getElementById('save');
 		const formEl = document.getElementById('theme-settings');
 		const [sidebarSwapped, autohideNavbarEnvs] = [
-			!!Storage.getItem('persona:menus:legacy-layout'),
-			Storage.getItem('persona:navbar:autohide'),
+			!!Storage.getItem('gameover:menus:legacy-layout'),
+			Storage.getItem('gameover:navbar:autohide'),
 		];
 
-		document.getElementById('persona:menus:legacy-layout').checked = sidebarSwapped;
+		document.getElementById('gameover:menus:legacy-layout').checked = sidebarSwapped;
 		try {
 			const parsed = JSON.parse(autohideNavbarEnvs) || ['xs', 'sm'];
 			parsed.forEach((env) => {
-				const optionEl = document.getElementById('persona:navbar:autohide').querySelector(`option[value="${env}"]`);
+				const optionEl = document.getElementById('gameover:navbar:autohide').querySelector(`option[value="${env}"]`);
 				optionEl.selected = true;
 			});
 		} catch (e) {
@@ -31,11 +31,11 @@ define('forum/account/theme', ['forum/account/header', 'storage', 'settings', 'a
 			saveEl.addEventListener('click', () => {
 				const themeSettings = settings.helper.serializeForm($(formEl));
 				Object.keys(themeSettings).forEach((key) => {
-					if (key === 'persona:menus:legacy-layout') {
+					if (key === 'gameover:menus:legacy-layout') {
 						if (themeSettings[key] === 'on') {
-							Storage.setItem('persona:menus:legacy-layout', 'true');
+							Storage.setItem('gameover:menus:legacy-layout', 'true');
 						} else {
-							Storage.removeItem('persona:menus:legacy-layout');
+							Storage.removeItem('gameover:menus:legacy-layout');
 						}
 
 						return;

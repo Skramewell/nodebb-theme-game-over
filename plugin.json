@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-game-over",
+	"id": "nodebb-theme-gameover",
 	"hooks": [
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
 		{ "hook": "filter:config.get", "method": "getThemeConfig" },
@@ -10,12 +10,15 @@
 	],
 	"scripts": [
 		"public/modules/autohidingnavbar.js",
-		"public/persona.js"
+		"public/gameover.js"
 	],
 	"modules": {
-		"../admin/plugins/persona.js": "public/admin.js",
-		"persona/quickreply.js": "public/modules/quickreply.js",
+		"../admin/plugins/gameover.js": "public/admin.js",
+		"gameover/quickreply.js": "public/modules/quickreply.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
-	"languages": "languages"
+	"languages": "languages",
+	"staticDirs": {
+        "images": "public/images"
+    }
 }

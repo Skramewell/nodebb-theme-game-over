@@ -1,7 +1,7 @@
-Persona theme for Skramewell
+GameOver theme for Skramewell
 ====================
 
-Persona is the new default theme for Skramewell as of v0.7.1
+GameOver is the new default theme for Skramewell as of v0.7.1
 
 ## Addons
 

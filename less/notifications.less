@@ -7,7 +7,8 @@
 		list-style-type: none;
 		padding: 1em;
 		margin-bottom: 0.5em;
-		.zebra;
+		background-color: @notifications-default-bg;
+		border-radius: @border-radius-base;
 		.pointer;
 
 		&:last-child {
@@ -15,7 +16,7 @@
 		}
 
 		&.unread {
-			background: #fefbed;
+			background: @notifications-default-unread-bg;
 		}
 
 		.timestamp {
