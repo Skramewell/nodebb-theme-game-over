@@ -5,6 +5,11 @@ body.theme-gameover.lights-out {
     a {
         color: @link-color;
         text-decoration: none;
+        &:focus, 
+        &:hover {
+            color: @link-hover-color;
+            text-decoration: underline;
+        }
     }
 
     a.permalink,
@@ -34,7 +39,6 @@ body.theme-gameover.lights-out {
       .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border) !important;
     }
       
-
     .btn-link {
         color: @link-color;
         &,
@@ -64,6 +68,14 @@ body.theme-gameover.lights-out {
             text-decoration: none;
           }
         }
+    }
+
+    .text-muted {
+        color: @gray-lighter;
+    }
+
+    hr {
+        border-color: @category-dark-title-bg;
     }
 
     .navbar-default {
@@ -376,6 +388,11 @@ body.theme-gameover.lights-out {
         background-color: @gray-darker;
         border-color: @topic-dark-border-color;
     }
+
+    .h-title {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+    }
     
     .account {
         .profile {
@@ -403,7 +420,8 @@ body.theme-gameover.lights-out {
             color: @text-color-dark;
         }
     }
-    .page-user-info {
+
+    &.page-user-info {
         .recent-flags {
             .timestamp {
                 color: @text-color-dark;
@@ -415,5 +433,21 @@ body.theme-gameover.lights-out {
                 color: @text-color-dark;
             }
         }
+    }
+
+    .list-group-item {
+        background-color: @list-group-bg-dark;
+        border-color: @list-group-border-dark;
+    }
+
+    .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+        text-decoration: none;
+        color: @gray-lighter;
+        background-color: @category-dark-title-bg;
+    }
+
+    .lead {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
     }
 }

@@ -1,8 +1,8 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="users row">
-		<h1>[[pages:{template.name}, {username}]]</h1>
+	<div class="users">
+		<h1 class="h-title">[[pages:{template.name}, {username}]]</h1>
 
 		<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 			<!-- IMPORT partials/users_list.tpl -->

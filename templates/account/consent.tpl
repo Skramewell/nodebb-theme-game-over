@@ -1,6 +1,6 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
-	<h2>[[user:consent.title]]</h2>
+	<h2 class="h-title">[[user:consent.title]]</h2>
 	<p class="lead">[[user:consent.lead]]</p>
 	<p>[[user:consent.intro]]</p>
 

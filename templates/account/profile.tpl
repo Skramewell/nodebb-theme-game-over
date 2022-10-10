@@ -1,7 +1,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="profile row">
+	<div class="profile">
 		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
 		<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
 		<!-- IF isAdminOrGlobalModeratorOrModerator -->
@@ -92,73 +92,65 @@
 
 	<hr />
 
-	<div class="row">
-		<div class="col-xs-12 account-block hidden">
-			<div class="account-picture-block text-center">
-				<span>
-					<span class="account-username"> {username}</span>
-				</span>
+	<div class="col-xs-12 account-block hidden">
+		<div class="account-picture-block text-center">
+			<span>
+				<span class="account-username"> {username}</span>
+			</span>
 
-				<!-- IF !isSelf -->
-				<a component="account/unfollow" href="#" class="btn btn-default{{{ if !isFollowing }}} hide{{{ end }}}">[[user:unfollow]]</a>
-				<a component="account/follow" href="#" class="btn btn-primary{{{ if isFollowing }}} hide{{{ end }}}">[[user:follow]]</a>
-				<!-- ENDIF !isSelf -->
-			</div>
+			<!-- IF !isSelf -->
+			<a component="account/unfollow" href="#" class="btn btn-default{{{ if !isFollowing }}} hide{{{ end }}}">[[user:unfollow]]</a>
+			<a component="account/follow" href="#" class="btn btn-primary{{{ if isFollowing }}} hide{{{ end }}}">[[user:follow]]</a>
+			<!-- ENDIF !isSelf -->
 		</div>
 	</div>
 
 	<!-- IF groups.length -->
-	<div class="row">
-		<div class="col-xs-12 hidden">
-			{{{each groups}}}
-			<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
-			{{{end}}}
-		</div>
+	<div class="col-xs-12 hidden">
+		{{{each groups}}}
+		<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
+		{{{end}}}
 	</div>
 	<!-- ENDIF groups.length -->
 
 	<!-- IF ips.length -->
-	<div class="row">
-		<div class="col-xs-12 hidden">
-			<div class="panel-heading">
-				<h3 class="panel-title">[[global:recentips]]</h3>
-			</div>
-			<div class="panel-body">
-			{{{each ips}}}
-				<div>{ips}</div>
-			{{{end}}}
-			</div>
+	<div class="col-xs-12 hidden">
+		<div class="panel-heading">
+			<h3 class="panel-title">[[global:recentips]]</h3>
+		</div>
+		<div class="panel-body">
+		{{{each ips}}}
+			<div>{ips}</div>
+		{{{end}}}
 		</div>
 	</div>
 	<!-- ENDIF ips.length -->
 
-	<div class="row">
-		{{{ if bestPosts.length }}}
-		<div class="col-lg-12 col-xs-12 posts-time-line">
-			<h1>[[pages:account/best, {username}]]</h1>
+	{{{ if bestPosts.length }}}
+	<div class="col-lg-12 col-xs-12 posts-time-line">
+		<h1>[[pages:account/best, {username}]]</h1>
 
-			<div class="col-xs-12">
-				<ul component="posts" class="posts-list">
-				{{{each bestPosts}}}
-				<!-- IMPORT partials/posts_list_item.tpl -->
-				{{{end}}}
-				</ul>
-			</div>
+		<div class="col-xs-12">
+			<ul component="posts" class="posts-list">
+			{{{each bestPosts}}}
+			<!-- IMPORT partials/posts_list_item.tpl -->
+			{{{end}}}
+			</ul>
 		</div>
-		{{{ end }}}
-		{{{ if latestPosts.length}}}
-		<div class="col-lg-12 col-xs-12 posts-time-line">
-			<h1>[[pages:account/latest-posts, {username}]]</h1>
-			<div class="col-xs-12">
-				<ul component="posts" class="posts-list">
-				{{{each latestPosts}}}
-				<!-- IMPORT partials/posts_list_item.tpl -->
-				{{{end}}}
-				</ul>
-			</div>
-		</div>
-		{{{ end }}}
 	</div>
+	{{{ end }}}
+	{{{ if latestPosts.length}}}
+	<div class="col-lg-12 col-xs-12 posts-time-line">
+		<h1>[[pages:account/latest-posts, {username}]]</h1>
+		<div class="col-xs-12">
+			<ul component="posts" class="posts-list">
+			{{{each latestPosts}}}
+			<!-- IMPORT partials/posts_list_item.tpl -->
+			{{{end}}}
+			</ul>
+		</div>
+	</div>
+	{{{ end }}}
 
 	<div id="user-action-alert" class="alert alert-success hide"></div>
 </div>
