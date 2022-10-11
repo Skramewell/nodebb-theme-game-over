@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<form id="advanced-search">
-				<div class="form-group">
+				<div class="form-group well">
 					<div class="row">
 						<div class="col-md-6">
 							<label>[[global:search]]</label>
