@@ -290,8 +290,8 @@ body.theme-gameover.lights-out {
     .nav-pills {
         > li {
             > a {
-            background-color: @navs-dark-bg;
-            color: @text-color-dark;
+                background-color: @navs-dark-bg;
+                color: @text-color-dark;
             }
         }
     }
@@ -517,5 +517,45 @@ body.theme-gameover.lights-out {
     .lead {
         background-color: @gray-darker;
         border-color: @topic-dark-border-color;
+    }
+
+    .topic [component="post/downvote"], .topic [component="post/upvote"] {
+        color: @gray-light;
+    }
+
+    .emoji-dialog {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+        .emoji-tabs .emoji-dialog-search-container button.close {
+            border-color: @topic-dark-border-color;
+        }
+        .nav>li {
+            &.active>a,
+            .active>a:focus,
+            .active>a:hover {
+                background-color: @body-bg-dark;
+                border-color: @category-dark-border-color;
+                color: @gray-lighter;
+                text-decoration: none;
+            }
+            a:hover {
+                border-color: @category-dark-border-color;
+                text-decoration: none;
+                background-color: @category-dark-title-bg;
+            }
+        }
+    
+    }
+
+    @media (max-width: @screen-md-max) {
+        .slideout-menu a, .slideout-menu button {
+            color: @gray-lighter;
+            text-decoration: none;
+            &:hover, 
+            &:hover {
+                background-color: inherit;
+                text-decoration: underline;
+            }
+        }
     }
 }

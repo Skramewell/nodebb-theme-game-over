@@ -81,6 +81,10 @@
 		}
 	}
 	.navbar-header .navbar-search {
+		padding: 13px 0 13px 0;
+		font-size: 1.33333333em;
+		list-style: none;
+
 		input[name="term"] {
 			width: 150px;
 		}
@@ -89,8 +93,6 @@
 		i[title="Search"] {
 			margin-top: 4px;
 		}
-
-		padding: 4px 0px 4px 0px;
 	}
 	#menu .menu-section {
 		padding-top: 20px;
@@ -113,6 +115,7 @@
 				a {
 					height: 100%;
 					padding-top: 15px;
+					border-radius: 0;
 				}
 				&.active {
 					a {
@@ -146,6 +149,7 @@
 				color: #fff;
 				position: relative;
 				height: 60px;
+				background-color: inherit;
 
 				&:hover {
 					background: none;
@@ -347,5 +351,17 @@
 
 	[data-section="notifications"] ul li a:first-child {
 		display: none;
+	}
+
+	.slideout-menu {
+		li {
+			list-style-type: none;
+		}
+		a[data-original-title="Dark Theme"] {
+			list-style-type: none;
+			padding: 10px 20px;
+			display: block;
+			border-bottom: 1px solid;
+		}
 	}
 }
