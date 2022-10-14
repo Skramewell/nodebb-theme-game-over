@@ -155,6 +155,10 @@
 @btn-default-bg:                 #fff;
 @btn-default-border:             #ccc;
 
+@btn-dark-color:                 @gray-lighter;
+@btn-dark-bg:                    @gray-darker;
+@btn-dark-border:                @topic-dark-border-color;
+
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
@@ -236,11 +240,9 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
-//** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       #ccc;
+@dropdown-border:                @topic-default-border-color;
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            #e5e5e5;
+@dropdown-divider-bg:            @topic-default-border-color;
 
 //** Dropdown link text color.
 @dropdown-link-color:            @gray-dark;

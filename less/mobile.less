@@ -88,10 +88,10 @@
 		input[name="term"] {
 			width: 150px;
 		}
-
-		// Hammer
-		i[title="Search"] {
-			margin-top: 4px;
+		[title="Search"] {
+			i {
+				color: @navbar-default-link-color;
+			}
 		}
 	}
 	#menu .menu-section {
@@ -148,7 +148,7 @@
 				border: none;
 				color: #fff;
 				position: relative;
-				height: 60px;
+				height: 70px;
 				background-color: inherit;
 
 				&:hover {
@@ -168,7 +168,7 @@
 						height: 40px;
 						width: 40px;
 						font-size: 20px;
-						border-radius: 0;
+						border-radius: 100%;
 					}
 				}
 
@@ -214,7 +214,6 @@
 				}
 
 				.notification-chat-content {
-					padding-top: 10px;
 					padding-right: 20px;
 				}
 
@@ -362,6 +361,24 @@
 			padding: 10px 20px;
 			display: block;
 			border-bottom: 1px solid;
+		}
+	}
+
+	.categories>li .category-children .category-children-item, 
+	.category>ul>li .category-children .category-children-item {
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+
+	.composer {
+		.form-control {
+			border-radius: 0;
+		}
+		.write-container{
+			.preview,
+			.write {
+				border-radius: 0 !important;
+			}
 		}
 	}
 }
