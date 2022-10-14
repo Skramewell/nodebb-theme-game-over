@@ -30,7 +30,7 @@ body.theme-gameover.lights-out {
     }
 
     .btn-default {
-      .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border) !important;
+      .button-variant(@btn-dark-color; @btn-dark-bg; @btn-dark-border) !important;
     }
     .btn-primary {
       .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border) !important;
@@ -521,6 +521,14 @@ body.theme-gameover.lights-out {
 
     .topic [component="post/downvote"], .topic [component="post/upvote"] {
         color: @gray-light;
+    }
+    
+    .quick-search-container {
+        background-color: @gray-darker;
+        border-color: @topic-dark-border-color;
+        .divider {
+            background-color: @topic-dark-border-color;
+        }
     }
 
     .emoji-dialog {
