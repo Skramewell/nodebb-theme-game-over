@@ -119,10 +119,6 @@
 				.user-icon-style(24px, 1.5rem, 50%);
 			}
 		}
-
-		&:last-child li {
-			border-bottom: 0;
-		}
 	}
 
 	.unread {
@@ -186,8 +182,11 @@
 	}
 }
 
-[component="category-selector"], .category-dropdown-container {
+[component="category-selector"] {
 	margin-bottom: 10px;
+}
+
+[component="category-selector"], .category-dropdown-container {
 	.fa-stack {
 		font-size: 65%;
 		border-radius: 50%;

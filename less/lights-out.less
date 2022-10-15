@@ -8,7 +8,7 @@ body.theme-gameover.lights-out {
         &:focus, 
         &:hover {
             color: @link-hover-color;
-            text-decoration: underline;
+            text-decoration: none;
         }
         &.list-group-item {
             color: @gray-lighter;
@@ -26,7 +26,7 @@ body.theme-gameover.lights-out {
     a.permalink:focus,
     a.permalink:hover {
         color: @gray-light;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     .btn-default {
@@ -283,8 +283,12 @@ body.theme-gameover.lights-out {
 
     .modal-content {
         background-color: @modal-dark-bg;
-        border: 1px solid @topic-dark-border-color;
+        border-color: @topic-dark-border-color;
         color: @text-color-dark;
+    }
+
+    .modal-footer {
+        border-color: @topic-dark-border-color;
     }
 
     .nav-pills {
@@ -428,6 +432,10 @@ body.theme-gameover.lights-out {
     }
     
     .account {
+        .fullname {
+            color: @gray-lighter;
+        }
+
         .profile {
             background-color: @gray-darker;
             border-color: @topic-dark-border-color;
@@ -555,6 +563,17 @@ body.theme-gameover.lights-out {
     
     }
 
+    .level-index>div:first-child {
+        color: @gray-lighter;
+    }
+
+    @media (max-width: @screen-xs-max) {
+		.categories>li:last-child,
+        .category>ul>li:last-child {
+			border-bottom: 1px solid @category-dark-border-color;
+		};
+	}
+
     @media (max-width: @screen-md-max) {
         .slideout-menu a, .slideout-menu button {
             color: @gray-lighter;
@@ -562,7 +581,7 @@ body.theme-gameover.lights-out {
             &:hover, 
             &:hover {
                 background-color: inherit;
-                text-decoration: underline;
+                text-decoration: none;
             }
         }
     }

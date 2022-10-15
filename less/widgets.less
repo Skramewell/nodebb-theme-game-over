@@ -43,6 +43,39 @@
         }
     }
 
+    a[itemprop="author"] {
+        float: left;
+    }
+    .user-level-topic {
+        display: inline-block;
+        text-transform: uppercase;
+        vertical-align: -5px;
+        padding: 4px;
+        border-radius: 2px;
+        max-width: 150px;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.1;
+        font-size: 75%;
+        margin-right: unset;
+        background-color: #ffc107;
+        color: #ffffff !important;
+        &:hover {
+            background-color: #fda34b;
+            color: #fff;
+        }
+        
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f521";
+            margin-right: 5px;
+        }
+    }
+    .popover-title {
+        background-color: #fda34b;
+    }
+
     @media (max-width: @screen-sm) {
         .forum-stats {
             .col-md-3.col-xs-3 {
