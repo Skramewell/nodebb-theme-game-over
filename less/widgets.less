@@ -34,12 +34,28 @@
     }
 
 
+    .widget-reactions {
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
     .reactions {
-        .reaction.reacted {
+        .reaction {
             border-color: @game-over-color;
+            &.reacted {
+                border-color: @gray-light;
+            }
+            margin: 3px 1px;
         }
         .reaction-add {
+            margin-right: unset;
+            font-size: 15px;
             color: @gray-light;
+            .fa.fa-plus-square-o {
+                &:before {
+                    content: "\f59a";
+                }
+            }
         }
     }
 

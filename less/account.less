@@ -1,6 +1,10 @@
 .account {
 	margin-top: 50px;
 
+	@media (max-width: @screen-lg) {
+		margin-top: 230px;
+	}
+
 	.breadcrumb {
 		margin-bottom: 30px;
 	}
@@ -95,6 +99,7 @@
 			}
 
 			.fa {
+				display: table-cell;
 				color: white;
 				background-color: #333;
 				opacity: 1;

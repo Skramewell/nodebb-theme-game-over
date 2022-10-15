@@ -26,15 +26,33 @@
 
 	.account {
 		margin-top: 35px;
-
-		.cover .controls i {
-			font-size: 3em;
-		}
+		.cover {
+			.controls{
+				text-align: left;
+				line-height: 110px;
+				i {
+					font-size: 3em;
+				}
+			} 
+		} 
 	}
 
 	.btn-group.account-fab {
 		bottom: unset;
 		top: 70px;
+	}
+}
+
+@media (max-width: @screen-xs) {
+	.account {
+		.cover {
+			.controls{
+				.fa {
+					margin: 5px;
+					font-size: 1em;
+				}
+			} 
+		} 
 	}
 }
 

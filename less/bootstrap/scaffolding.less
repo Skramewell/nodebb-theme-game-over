@@ -160,3 +160,30 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+
+// Select hover
+.ui-autocomplete {
+  border-radius: @border-radius-base;
+  .ui-menu-item {
+    .ui-menu-item-wrapper {
+      padding: 6px;
+    }
+    &:first-child {
+      .ui-button.ui-state-active:hover, .ui-button:active, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
+        border-top-left-radius: @border-radius-base;
+        border-top-right-radius: @border-radius-base;
+      }
+    }
+    &:last-child {
+      .ui-button.ui-state-active:hover, .ui-button:active, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
+        border-bottom-left-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+      }
+    }
+    .ui-button.ui-state-active:hover, .ui-button:active, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
+        border-color: @game-over-darken-color !important;
+        background: @game-over-color !important;
+        color: @gray-lighter !important;
+    }
+  }
+}
