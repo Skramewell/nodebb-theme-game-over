@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-gameover",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "nbbpm": {
     "compatibility": "^2.0.0"
   },

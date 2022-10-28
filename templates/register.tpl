@@ -6,7 +6,7 @@
 </div>
 <div class="row register">
 	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
-		<div class="{register_window:spansize} well">
+		<div class="col-md-12 well">
 			<div class="register-block">
 				<div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify" >
 					<strong>[[error:registration-error]]</strong>
@@ -62,7 +62,7 @@
 		</div>
 
 		{{{ if alternate_logins }}}
-		<div class="col-md-6">
+		<div class="col-md-12 well">
 			<div class="alt-register-block">
 				<h4>[[register:alternative_registration]]</h4>
 				<ul class="alt-logins">

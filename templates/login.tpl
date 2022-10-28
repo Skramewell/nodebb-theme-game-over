@@ -7,7 +7,7 @@
 <div class="row login">
 	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		{{{ if allowLocalLogin }}}
-		<div class="{{{ if alternate_logins }}}col-md-6{{{ else }}}col-md-12{{{ end }}} well">
+		<div class="col-md-12 well">
 			<div class="login-block">
 				<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -66,7 +66,7 @@
 		{{{ end }}}
 
 		{{{ if alternate_logins }}}
-		<div class="{{{ if allowLocalLogin }}}col-md-6{{{ else }}}col-md-12{{{ end }}}">
+		<div class="col-md-12 well">
 			<div class="alt-login-block">
 				<h4>[[login:alternative_logins]]</h4>
 				<ul class="alt-logins">

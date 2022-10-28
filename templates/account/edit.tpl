@@ -47,7 +47,7 @@
 			</div>
 		</div>
 
-		<div class="<!-- IF !sso.length -->col-md-9 col-sm-8<!-- ELSE -->col-md-5 col-sm-4<!-- ENDIF !sso.length --> well">
+		<div class="col-md-9 col-sm-8 well">
 			<form role="form" component="profile/edit/form">
 				<div class="form-group">
 					<label for="fullname">[[user:fullname]]</label>
@@ -110,7 +110,7 @@
 		</div>
 
 		<!-- IF sso.length -->
-		<div class="col-md-5 col-sm-4">
+		<div class="col-md-12 well">
 			<label>[[user:sso.title]]</label>
 			<div class="list-group">
 				{{{each sso}}}
