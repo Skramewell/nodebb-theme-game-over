@@ -129,6 +129,10 @@
 
 	.subcategory {
 		margin-bottom: 10px;
+
+		[component="category-selector"] {
+			margin-bottom: 10px;
+		}
 	}
 }
 
@@ -163,7 +167,8 @@
 	}
 }
 
-.categories-title {
+.categories-title,
+.subcategories-title {
 	text-transform: uppercase;
 	margin-top: 0;
 	font-size: 14px;
@@ -180,10 +185,6 @@
 		margin-left: 0;
 		margin-right: 0;
 	}
-}
-
-[component="category-selector"] {
-	margin-bottom: 10px;
 }
 
 [component="category-selector"], .category-dropdown-container {

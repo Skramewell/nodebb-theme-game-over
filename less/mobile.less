@@ -26,16 +26,18 @@
 
 	.account {
 		margin-top: 35px;
-		.cover {
-			.controls{
-				text-align: left;
-				line-height: 110px;
-				i {
-					font-size: 3em;
-				}
-			} 
-		} 
 	}
+
+	.cover,
+	.initialised {
+		.controls {
+			text-align: left !important;
+			line-height: 110px !important;
+			i {
+				font-size: 3em;
+			}
+		} 
+	} 
 
 	.btn-group.account-fab {
 		bottom: unset;
@@ -44,19 +46,26 @@
 }
 
 @media (max-width: @screen-xs) {
-	.account {
-		.cover {
-			.controls{
-				.fa {
-					margin: 5px;
-					font-size: 1em;
-				}
-			} 
+	.cover,
+	.initialised {
+		.controls {
+			.fa {
+				margin: 5px;
+				font-size: 1em;				
+			}
 		} 
-	}
+	} 
 }
 
 @media (max-width: @screen-md-max) {
+	.no-padding-right-only-desktop {
+		padding-right: inherit !important;
+	}
+	
+	.remove-padding-left-mobile-all {
+		padding: 0;
+	}
+
 	#panel {
 		background-color: inherit;
 		min-height: 100%;

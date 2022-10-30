@@ -1,4 +1,4 @@
-<div component="groups/container" class="groups details row">
+<div component="groups/container" class="groups details">
 	<div component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<!-- IF group.isOwner -->
 		<div class="controls">
@@ -11,11 +11,9 @@
 		<!-- ENDIF group.isOwner -->
 	</div>
 
-	<div class="col-xs-12">
-		<!-- IMPORT partials/breadcrumbs.tpl -->
-	</div>
+	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-4 col-xs-12 remove-padding-left-mobile-all">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
