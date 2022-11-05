@@ -92,6 +92,25 @@
         background-color: #fda34b;
     }
 
+    #contact-form {
+        min-height: 20px;
+        padding: 19px;
+        margin-bottom: 20px;
+        background-color: @well-bg;
+        border: 1px solid @well-border;
+        border-radius: @border-radius-base;
+        .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+        blockquote {
+          border-color: #ddd;
+          border-color: rgba(0,0,0,.15);
+        }
+
+        .form-horizontal .form-group {
+            margin-left: 0; 
+            margin-right: 0;
+        }
+    }
+
     @media (max-width: @screen-sm) {
         .forum-stats {
             .col-md-3.col-xs-3 {
